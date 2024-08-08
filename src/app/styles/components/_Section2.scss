@@ -1,0 +1,105 @@
+.section2 {
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 3.375rem;
+
+    h3 {
+      font-size: 3.75rem;
+      font-weight: 800;
+    }
+  }
+
+  .tabMenu {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+
+    ul {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      li {
+        display: inline-flex;
+        align-items: center;
+
+        button {
+          color: #d4d4d4;
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+
+        &.on {
+          button {
+            position: relative;
+            color: #111;
+
+            &::before {
+              position: absolute;
+              left: 50%;
+              bottom: 100%;
+              width: 30px;
+              height: 30px;
+              background-image: url(../../../public/images/ic_star_pink.png);
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+              transform: translateX(-50%);
+              content: "";
+            }
+          }
+        }
+
+        &:not(:last-of-type) {
+          &::after {
+            width: 6px;
+            height: 6px;
+            margin: 0 1rem;
+            border-radius: 100%;
+            background-color: #d4d4d4;
+            content: "";
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .section2 {
+    .title {
+      h3 {
+        font-size: 2.8rem;
+      }
+    }
+
+    .tabMenu {
+      ul {
+        li {
+          button {
+            font-size: 1.2rem;
+          }
+
+          &:not(:last-of-type) {
+            &::after {
+              margin: 0 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .section2 {
+    .title {
+      margin-bottom: 2.375rem;
+      h3 {
+        font-size: 2.1rem;
+      }
+    }
+  }
+}

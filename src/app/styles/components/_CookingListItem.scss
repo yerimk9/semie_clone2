@@ -1,0 +1,123 @@
+.hashList {
+  > li {
+    width: calc(25% - 2rem);
+
+    .img {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      border-radius: 20px;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-image: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0) 85%,
+          rgba(0, 0, 0, 0.2)
+        );
+        z-index: 11;
+        content: "";
+      }
+
+      &::after {
+        display: block;
+        padding-top: 100%;
+        content: "";
+      }
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+        transition: all 0.2s ease-out;
+        z-index: 10;
+      }
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+      min-height: 1.625rem;
+      margin-top: 1.125rem;
+      color: #999;
+      font-size: 0.875rem;
+
+      .date {
+        position: relative;
+        margin-left: 0.625rem;
+        padding-left: 0.625rem;
+
+        &::before {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          width: 1px;
+          height: 8px;
+          transform: translateY(-50%);
+          background-color: #c4c4c4;
+          content: "";
+        }
+      }
+    }
+
+    .text {
+      padding-bottom: 0;
+
+      h4 {
+        -webkit-line-clamp: 2;
+      }
+    }
+
+    .scrap {
+      position: absolute;
+      top: 1.5rem !important;
+      right: 1.5rem;
+      width: 2.25rem;
+      height: 2.25rem;
+      text-indent: -9999px;
+      background-image: url(../../../public/images/ic_scrap.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+      z-index: 12;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .hashList {
+    > li {
+      width: calc(33% - 2rem);
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hashList {
+    > li {
+      width: calc(50% - 2rem);
+    }
+  }
+}
+@media screen and (max-width: 560px) {
+  .hashList {
+    > li {
+      .scrap {
+        display: inline-block;
+        width: 4rem;
+        height: 4rem;
+      }
+
+      .info {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}

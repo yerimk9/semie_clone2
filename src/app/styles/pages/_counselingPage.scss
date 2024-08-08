@@ -1,0 +1,66 @@
+.labList {
+  .myfood {
+    &.v2 {
+      .myfoodBtnWrap {
+        background-color: #ffaf54 !important;
+      }
+    }
+  }
+
+  .detail_wrap {
+    .detail_con {
+      .cardList {
+        display: flex;
+        flex-wrap: wrap;
+        width: calc(100% + 2rem);
+        margin-left: -1rem;
+
+        > li {
+          .hashWrap {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: auto;
+            padding: 0 1.5rem;
+          }
+
+          .foot {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.125rem 1.5rem;
+
+            .cmtNum {
+              display: flex;
+              align-items: center;
+              font-size: 1rem;
+
+              &::before {
+                width: 1.5rem;
+                height: 1.5rem;
+                margin-right: 0.125rem;
+                background-image: url(../../../public/images/ic_comment.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100% auto;
+                content: "";
+              }
+            }
+
+            .scrap {
+              width: 2.25rem;
+              height: 2.25rem;
+              text-indent: -9999px;
+              background-image: url(../../../public/images/ic_scrap_grey.png);
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+}

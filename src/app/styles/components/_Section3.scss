@@ -1,0 +1,232 @@
+.section3 {
+  .bg_wrap {
+    padding: 6.25rem 4.5rem 4.5rem;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: #fff9e2;
+    background-image: url("https://semie.cooking/assets/images/common/bg_pattern.png");
+  }
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 3.375rem;
+
+    h3 {
+      font-size: 3.75rem;
+      font-weight: 800;
+    }
+  }
+
+  .swiper-container-bg {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+
+    > img {
+      width: 28.75rem;
+      margin: 0 auto;
+    }
+  }
+
+  .swiper-container-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(1840px - 704px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    margin: 0 auto !important;
+
+    .swiper {
+      height: 100%;
+
+      .swiper-slide {
+        a {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+
+          .img {
+            display: flex;
+            justify-self: center;
+            margin: 0 30px;
+            align-self: center;
+            img {
+              min-width: 204px;
+              min-height: 204px;
+              border-radius: 20px;
+            }
+          }
+        }
+      }
+
+      &.mySwiper2 {
+        .swiper-slide {
+          a {
+            flex-direction: column;
+            justify-content: space-around;
+
+            .top_text {
+              text-align: left;
+              margin-left: 40px;
+              h4 {
+                margin-bottom: 0.438rem;
+                font-size: 1.875rem;
+                font-weight: bold;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                // padding-left: 40px;
+              }
+
+              p {
+                color: #999;
+                font-size: 1rem;
+                margin-left: 5px;
+                margin-top: 1rem;
+
+                span {
+                  position: relative;
+                  margin-right: 0.625rem;
+                  padding-right: 0.625rem;
+
+                  &::after {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    width: 0.063rem;
+                    height: 0.625rem;
+                    background-color: #c4c4c4;
+                    transform: translateY(-50%);
+                    content: "";
+                  }
+                }
+              }
+            }
+
+            .bottom_text {
+              width: 100%;
+              margin-top: -30px;
+              padding: 0px 40px;
+              font-size: 1.125rem;
+              line-height: 1.56;
+              text-align: left;
+              overflow: hidden;
+              text-overflow: ellipsis;
+
+              display: -webkit-box;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .section3 {
+    .bg_wrap {
+      padding: 3.5rem 0 6.25rem 1.875rem;
+      border-radius: 0;
+      overflow: hidden;
+    }
+
+    .title {
+      margin-bottom: 2rem;
+      h3 {
+        font-size: 2.1rem;
+      }
+    }
+
+    .swiper-container-bg {
+      > img {
+        display: none;
+      }
+    }
+
+    .swiper-container-box {
+      position: static;
+      width: 100%;
+      transform: translate(0);
+    }
+
+    .swiper {
+      &.mySwiper1,
+      &.mySwiper3 {
+        display: none;
+      }
+
+      &.mySwiper2 {
+        .swiper-slide {
+          min-width: 567.692px;
+
+          height: 100%;
+          border-radius: 20px;
+          background-image: url("https://semie.cooking/assets/images/common/bg_frame.png");
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+
+          .img {
+            img {
+              width: 250px;
+              height: 250px;
+            }
+          }
+
+          .top_text {
+            margin-bottom: 15%;
+            margin-top: 7%;
+          }
+
+          .bottom_text {
+            margin-top: 8% !important;
+            margin-bottom: 10%;
+          }
+        }
+      }
+    }
+
+    .myfood {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .section3 {
+    .swiper {
+      &.mySwiper2 {
+        .swiper-slide {
+          background-size: 73% 95%;
+
+          .img {
+            align-self: baseline !important;
+            padding-left: 80px !important;
+            img {
+              width: 188px;
+              height: 188px;
+            }
+          }
+
+          .top_text {
+            margin-bottom: 7%;
+          }
+
+          .bottom_text {
+            width: 70% !important;
+          }
+        }
+      }
+    }
+
+    .myfood {
+    }
+  }
+}

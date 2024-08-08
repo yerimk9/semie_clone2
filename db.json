@@ -1,0 +1,717 @@
+{
+  "food_guide_list": [
+    {
+      "id": 1,
+      "title": "우리 아이 스스로 요리하는 법",
+      "sub_title1": "요리를 시작하기 좋은 나이 10-13세!<br/> 스스로 요리할 수 있는 자신감을 갖도록, 함께 즐요해요!",
+      "sub_title2": "한글을 배우기 좋은 나이 6-7세,<br/>요리를 시작하기 좋은 나이 10-13세!<br/><br/>아이들이 요리를 통해 즐거움을 느끼고,<br/> 스스로 요리할 수 있는 자신감을 갖게 되어<br/>더 건강하고 헹복해질 수 있도록<br/>간단히 데우고 조리하는 요리과정부터 시작해봐요!",
+      "hashTag": ["전자레인지요리", "초간단요리", "아이와 함께"],
+      "main_img": "https://semie.cooking/image/contents/solution/js/sa/hkagfitd/143308762rtmh.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "아이를 위한 냉동밀키트",
+          "desc": "한 번에 만들어 먹기 전,데우기만 하세요!",
+          "timestamp": "2024.07.30 08:00",
+          "hashTag": ["전자레인지요리", "초간단요리"],
+          "preparation_time": null,
+          "cooking_time": null
+        },
+        {
+          "id": 2,
+          "name": "튼튼이 멸치볶음과 주먹밥",
+          "desc": "볶지 않고 전자레인지로 3분이면 끝!",
+          "timestamp": "2022.04.21 09:15",
+          "hashTag": null,
+          "preparation_time": 0,
+          "cooking_time": 3
+        },
+        {
+          "id": 3,
+          "name": "6분 완성! 계란밥찜",
+          "desc": "바쁜 아침 간단하지만 든든하게 먹고 싶을 때!",
+          "hashTag": null,
+          "preparation_time": 10,
+          "cooking_time": 6
+        },
+        {
+          "id": 4,
+          "name": "노른자를 톡- 써니사이드업",
+          "desc": "노란 해가 떠 있는 모습의 계란 후라이, 써니사이드업",
+          "hashTag": null,
+          "preparation_time": 0,
+          "cooking_time": 3
+        },
+        {
+          "id": 5,
+          "name": "누룽지 만들기",
+          "desc": "쭉쭉 밀고, 뿌셔뿌셔!",
+          "hashTag": ["누룽지", "전자레인지"],
+          "preparation_time": null,
+          "cooking_time": null
+        },
+        {
+          "id": 6,
+          "name": "새콤달콤 오이피클",
+          "desc": "느끼한 음식을 먹을 때 없으면 아쉬운 오이피클",
+          "hashTag": null,
+          "preparation_time": 10,
+          "cooking_time": 5
+        },
+        {
+          "id": 7,
+          "name": "초간단 짜장밥",
+          "desc": "잘 볶은 특제춘장소스로 진하게, 간단하게!",
+          "hashTag": null,
+          "preparation_time": 10,
+          "cooking_time": 8
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "과일 손질법,<br />이것만 보면 고민 끝!",
+      "main_img": "https://semie.cooking/image/contents/solution/mb/rj/niivirnp/142692709ndnf.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "초간단! 이런 국물 요리 어때?",
+      "main_img": "https://semie.cooking/image/contents/recipe/eo/ee/bwtopfkf/122638302nwdp.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "평범한 전은 거부한다.<br />이색 전 모음",
+      "main_img": "https://semie.cooking/image/contents/recipe/lk/yk/zodtedde/121691070medr.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "칼질 연습, 이 레시피로 도전!",
+      "main_img": "https://semie.cooking/image/contents/recipe/cz/vs/udowdjem/127130247nivo.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "식재료 즐겨찾기:<br />애호박",
+      "main_img": "https://semie.cooking/image/contents/solution/gp/kw/ltuiadmi/127149651aalh.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "여유로운 주말 아침,<br />근사한 브런치 한상",
+      "main_img": "https://semie.cooking/image/contents/recipe/yp/ju/rwqsmbaw/127134661pmxx.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "육퇴 후,<br />수고한 우리를 위한 맛있지만 간단한 요리",
+      "main_img": "https://semie.cooking/image/contents/recipe/gg/ts/cgqyjjex/137429963ucff.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "제대로된 메인요리<br />열 반찬 안 부럽다",
+      "main_img": "https://semie.cooking/image/contents/recipe/uf/sk/jeosazrq/137438780vwdt.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "살림의 정석",
+      "main_img": "https://semie.cooking/image/contents/solution/ti/tg/nwlhgidi/130000788nqyu.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "아프니까 챙겨 먹자",
+      "main_img": "https://semie.cooking/image/contents/recipe/ql/sj/rpzigzgw/137416607tsub.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "밑반찬 만드는거?<br />생각보다 별거 없더라~",
+      "main_img": "https://semie.cooking/image/contents/recipe/th/ko/lssipvca/131890858wwtc.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "김밥 말아, 김밥!",
+      "main_img": "https://semie.cooking/image/contents/solution/ms/im/wxytnual/121795484ilfm.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "손님초대요리를 고민하고 있다면?",
+      "main_img": "https://semie.cooking/image/contents/solution/tt/zr/olftqogc/136571061ggeq.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "냉장고에 남아있는<br />처치 곤란 식재료, 어떡하죠?",
+      "main_img": "https://semie.cooking/image/contents/recipe/vt/yo/ywbafgnt/121173934zodf.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "편식하는 아이와<br />매일이 전쟁이라면?",
+      "main_img": "https://semie.cooking/image/contents/solution/jp/zf/jztobhbi/122809732rysh.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "지구야! 요리하자!🌏",
+      "main_img": "https://semie.cooking/image/contents/recipe/lk/yk/zodtedde/121691070medr.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "아무도 알려주지 않은 양념 차이점<br />용도별 사용법 모두 알려드려요!",
+      "main_img": "https://semie.cooking/image/contents/solution/dw/om/pozujihx/134490771sxap.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "식재료 즐겨찾기:<br />콩나물",
+      "main_img": "https://semie.cooking/image/contents/solution/gm/wx/mmykompt/127666272thie.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "주말에 하기 좋은 간식 모음.zip",
+      "main_img": "https://semie.cooking/image/contents/recipe/gh/dx/jrdsgitx/121173663tluo.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "title": "내 취향을 알아보기",
+      "main_img": "https://semie.cooking/image/contents/solution/gg/se/rkutejcd/122046230vssy.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "봄이 더 맛있어 지는 시간",
+      "main_img": "https://semie.cooking/image/contents/recipe/sv/je/sqcneshk/121448497xnjn.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "title": "SNS에 올리면 좋아요 폭발!<br />비주얼 근사한 요리들",
+      "main_img": "https://semie.cooking/image/contents/recipe/bn/ct/dzkyjmou/121187629typy.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "요리로 키우는<br />우리 아이 오감발달",
+      "main_img": "https://semie.cooking/image/contents/solution/hw/dl/ladswnef/129999783dhxi.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "title": "처음 주방을 채워야 한다면,<br />이렇게!",
+      "main_img": "https://semie.cooking/image/contents/solution/sc/hc/rbkekndg/129378407vcvn.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "title": "함께 요리하면<br />더 즐거워요",
+      "main_img": "https://semie.cooking/image/contents/solution/ie/da/cezxpmyi/128882932wuso.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "title": "식재료 즐겨찾기:<br />두부",
+      "main_img": "https://semie.cooking/image/contents/solution/gp/dj/sxecdjap/127570723eiqk.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "title": "'시금치 어디까지 먹어봤니?",
+      "main_img": "https://semie.cooking/image/contents/solution/cw/fk/gqfkvqng/127489633vqsq.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "title": "3 step이면 충분해!",
+      "main_img": "https://semie.cooking/image/contents/recipe/fc/fi/itnvssgp/121709422cbvm.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "title": "우리집 필수 식재료,<br />어떻게 보관해야 할까?",
+      "main_img": "https://semie.cooking/image/contents/solution/jd/mi/ganobohr/125932084vmek.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "title": "사랑하는 사람을 위한 첫 요리,<br />생일상부터 도전!",
+      "main_img": "https://semie.cooking/image/contents/recipe/px/gz/gtqnxpnw/122126547dkrg.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "title": "우리 아이와 함께, 즐요해!",
+      "main_img": "https://semie.cooking/image/contents/recipe/ms/ft/zmnapcji/122723790jqju.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "title": "2023년도를 빛낸<br />요리법 TOP 9",
+      "main_img": "https://semie.cooking/image/contents/recipe/tw/pi/ukeftaqo/121447073ftkm.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "title": "플러스 알파! 몇가지 센스만 더해<br />나만의 요리로 변신!",
+      "main_img": "https://semie.cooking/image/contents/recipe/cv/if/eewupitn/121684090htsi.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "title": "초보도 할 수 있는<br />그럴듯한 홈파티 음식",
+      "main_img": "https://semie.cooking/image/contents/solution/sz/ei/fmjndlsf/121703078ercu.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "title": "요리하면서 생기는 고민,<br />여기서 해결!",
+      "main_img": "https://semie.cooking/image/contents/solution/ce/nq/kvzajorj/121704856bplq.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "title": "요리를 선물한다는 건<br />마음을 건넨다는 것",
+      "main_img": "https://semie.cooking/image/contents/recipe/gv/li/yfavpvnd/122220684zrmb.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "title": "배달보다 빠른<br />초스피드 밑반찬 만들기",
+      "main_img": "https://semie.cooking/image/contents/recipe/mw/tc/wjiukher/121448270ouzs.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "title": "요리가 처음이라면?<br />꼭 봐야할 5가지 가이드",
+      "main_img": "https://semie.cooking/image/contents/solution/ge/va/wncxabnc/123241552ijeo.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "title": "생애 첫 요리 도전",
+      "main_img": "https://semie.cooking/image/contents/recipe/ut/in/etyshlxh/122895921ltfj.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "title": "재료 손질이 어려워<br />요리가 망설여진다면?",
+      "main_img": "https://semie.cooking/image/contents/solution/wc/sw/tujrtdhn/121802613wmzv.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "title": "오늘 30구 계란을 샀다",
+      "main_img": "https://semie.cooking/image/contents/solution/qs/lu/ezrbbyll/122730398kukq.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "title": "라면은 이제 지겨워요.<br />라면처럼 쉬운국물요리 없나요?",
+      "main_img": "https://semie.cooking/image/contents/recipe/cf/jq/uafbsanh/121625334lzpj.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "title": "나 설거지 진짜 하기 싫어!",
+      "main_img": "https://semie.cooking/image/contents/recipe/qc/vm/uurkgmfs/122224358otbj.jpg",
+      "items": [
+        {
+          "id": 1,
+          "name": "",
+          "desc": "",
+          "hashTag": [],
+          "preparation_time": 0,
+          "cooking_time": 0
+        }
+      ]
+    }
+  ]
+}

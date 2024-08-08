@@ -1,0 +1,306 @@
+footer {
+  background-color: $bg-color1;
+
+  .inner {
+    @include flex(space-between, flex-start);
+    width: 100%;
+    margin: 0 auto;
+    padding: 2.75rem 7rem;
+  }
+
+  .ft_link {
+    display: flex;
+    margin-bottom: 2.25rem;
+
+    li {
+      @include flexitems;
+
+      &:not(:last-of-type)::after {
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        margin: 0 8px;
+        border-radius: 100%;
+        background-color: $bg-color2;
+        content: "";
+      }
+
+      a {
+        font-size: 1rem;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .ft_info {
+    display: flex;
+    margin-bottom: 12px;
+
+    li {
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+      margin-right: 0.625rem;
+      padding-right: 0.625rem;
+      color: $primary-color3;
+      font-size: 1rem;
+      cursor: pointer;
+
+      &:last-of-type {
+        & > img {
+          flex-shrink: 0;
+          width: 1.125rem;
+          margin-left: 0.5rem;
+          transition: transform 0.2s;
+        }
+
+        & > img.active {
+          transform: rotate(180deg);
+        }
+      }
+
+      &:not(:last-of-type)::after {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 1px;
+        height: 0.625rem;
+        background-color: $primary-color3;
+        transform: translateY(-50%);
+        content: "";
+      }
+    }
+  }
+
+  .ft_info_drop {
+    display: none;
+    margin-bottom: 12px;
+    color: $primary-color3;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .ft_sns {
+    @include flexitems;
+
+    & > li:not(.sitemap) {
+      margin-left: 0.625em;
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 100%;
+        background-color: $bg-color3;
+      }
+    }
+
+    .sitemap {
+      position: relative;
+      margin-left: 1.25rem;
+
+      button {
+        @include flexSpaceBetween;
+        position: relative;
+        width: 13.125rem;
+        padding: 0.875rem 1.875rem;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 2.25rem;
+        border: 1px solid $bg-color3;
+        box-sizing: border-box;
+        background-color: $bg-color3;
+        z-index: 101;
+
+        transition: all 0.1s ease;
+
+        &.on {
+          border: 1px solid #111;
+          background-color: $primary-color1;
+        }
+      }
+
+      .siteList {
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        padding: 0;
+        border-radius: 2.25rem;
+        border: solid 1px $border-color1;
+        background-color: $primary-color1;
+        z-index: 100;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        transition: all 0.5s ease;
+
+        &.visible {
+          visibility: visible;
+
+          height: 13rem;
+          padding: 1.875rem 1.25rem 4.875rem 1.8rem;
+          transition: all 0.5s ease;
+          transform: scaleY(1);
+        }
+
+        ul {
+          overflow-y: scroll;
+          width: 100%;
+          height: 100%;
+
+          li {
+            a {
+              font-weight: bold;
+            }
+
+            + li {
+              margin-top: 1.25rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .ft_top {
+    float: right;
+    width: 3.625rem;
+    height: 3.625rem;
+    margin-top: 1.875rem;
+    text-indent: -9999px;
+    border-radius: 12px;
+    border: solid 1px $bg-color4;
+    background-color: $primary-color1;
+    background-image: url(../../../public/images/ic_top_btn.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1rem;
+  }
+
+  .logo_award {
+    margin-right: 1rem;
+    text-align: right;
+
+    img {
+      width: 6.875rem;
+    }
+  }
+
+  p {
+    color: $bg-color2;
+    font-size: 0.825rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  footer {
+    .inner {
+      flex-wrap: wrap;
+      padding: 2.5rem 0.875rem 10rem !important;
+
+      .ft_left {
+        width: 100%;
+        margin-bottom: 2.688rem;
+      }
+
+      .ft_right {
+        width: 100%;
+      }
+    }
+
+    .ft_info {
+      margin-bottom: 0;
+    }
+
+    .ft_info_drop {
+      margin-top: 12px;
+      font-size: 1.375rem;
+    }
+
+    .ft_sns {
+      position: relative;
+      flex-wrap: nowrap !important;
+
+      .sitemap {
+        width: 100%;
+        margin-left: 0;
+
+        button {
+          width: 100%;
+        }
+
+        .siteList {
+          height: 17rem;
+          padding: 1.875rem 1.25rem 6.875rem 1.8rem;
+        }
+      }
+
+      & > li:not(.sitemap) {
+        margin-left: 0;
+        margin-right: 1rem;
+      }
+    }
+
+    .logo_award {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      margin-right: 0;
+      text-align: left;
+
+      img {
+        width: 8.25rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  footer {
+    padding-bottom: 10rem;
+
+    .ft_left {
+      flex-shrink: 0;
+    }
+
+    .ft_sns {
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .logo_award {
+      width: 100%;
+      margin-right: 0;
+      margin-top: 2.25rem;
+      order: 3;
+    }
+
+    .ft_top {
+      bottom: 10rem;
+      right: 2.188rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  footer {
+    .inner {
+      padding: 2.75rem 1.875rem;
+    }
+
+    .ft_top {
+      position: fixed;
+      bottom: 4rem;
+      right: 2.1rem;
+
+      border-radius: 1rem;
+      background-size: 1.5rem;
+      z-index: 200;
+    }
+  }
+}

@@ -1,0 +1,187 @@
+.labList {
+  width: 100%;
+  max-width: 97.25rem;
+  margin: 0 auto;
+  padding: 12.5rem 1.875rem 6.25rem;
+  transition: max-width 0.4s;
+
+  .myfood {
+    // margin-bottom: 3rem;
+    margin-bottom: 1.8rem;
+    > img {
+      width: 9%;
+    }
+    .myfoodBtnWrap {
+      padding: 2rem 3.375rem 2rem 11.875rem;
+      border-radius: 8px;
+
+      p {
+        line-height: 1;
+      }
+    }
+  }
+
+  .tab {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1.688rem;
+    border: solid 1px #e5e5e5;
+    border-radius: 3.0625rem;
+
+    ul {
+      display: flex;
+
+      li {
+        width: 100%;
+
+        a {
+          width: 100%;
+          height: 100%;
+          padding: 1.375rem 0;
+          color: #999;
+          font-size: 1.375rem;
+          font-weight: 600;
+          text-align: center;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &.on {
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #111;
+            background-color: #fff9e2;
+
+            &::before {
+              display: inline-block;
+              width: 1.875rem;
+              height: 1.875rem;
+              background-image: url(../../../public/images/ic_star_pink.png);
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: auto 100%;
+              content: "";
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .detail_wrap {
+    width: 100%;
+    max-width: 93.5rem;
+    margin: 0 auto;
+    background-color: #fff;
+
+    .detail_con {
+      .hashList {
+        display: flex;
+        flex-wrap: wrap;
+        width: calc(100% + 2rem);
+        margin-left: -1rem;
+      }
+
+      .middle_bn {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+
+  .filter {
+    > ul {
+      li:last-child {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .labList {
+    .detail_wrap {
+      padding: 0;
+      .detail_con {
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .labList {
+    padding-top: 6rem;
+    .myfood {
+      margin-top: 3.125rem;
+
+      .myfoodBtnWrap {
+        flex-flow: column;
+        align-items: flex-end;
+        padding: 1.95rem 2.125rem 1.25rem 3rem;
+
+        p {
+          margin-bottom: 0.6rem;
+          //   font-size: 2rem;
+          font-size: 1.3rem;
+
+          span {
+            display: none;
+          }
+        }
+
+        a {
+          padding-left: 0;
+          //   font-size: 1.625rem;
+
+          img {
+            width: 1.5rem;
+          }
+
+          &::before {
+            top: 27px;
+            width: 100%;
+            height: 1px;
+            background-color: #fff;
+            transform: translateY(0);
+          }
+        }
+      }
+
+      > img {
+        width: 16%;
+        height: 6.375em;
+      }
+    }
+
+    .tab {
+      ul {
+        li {
+          &.on {
+            a {
+              padding: 1rem 0;
+              font-size: 1.275rem;
+            }
+          }
+          a {
+            padding: 1rem 0;
+            font-size: 1.275rem;
+          }
+        }
+      }
+    }
+
+    .detail_wrap {
+      .detail_con {
+        .middle_bn {
+          margin: 0 0 5rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,171 @@
+.guideWrap {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 1000;
+
+  .guide_modal {
+    overflow: hidden;
+    position: absolute;
+    top: 7rem;
+    left: 50%;
+    bottom: 7rem;
+    width: 43.75rem;
+    border-radius: 20px;
+    transform: translateX(-50%);
+
+    .guide_modal_head {
+      display: flex;
+      align-items: center;
+      padding: 1rem 1.875rem;
+      box-sizing: border-box;
+      background-color: #fcf6de;
+
+      .guide_modal_head_title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        h3 {
+          display: inline-flex;
+          align-items: center;
+          font-size: 1.875rem;
+          font-weight: 800;
+
+          img {
+            margin-right: 0.625rem;
+          }
+        }
+        /* 
+        .btn_arrow_lg {
+          padding: 1rem 1.5rem;
+          font-size: 1.125rem;
+
+          img {
+            width: 1rem;
+            margin-left: 0.5rem;
+          }
+        } */
+      }
+
+      .close {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-left: 1.473rem;
+        font-size: 1.875rem;
+        font-weight: 800;
+        text-indent: -9999px;
+        background-image: url(../../../public/images/ic_close_b.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+
+    .guide_modal_body {
+      height: calc(100% - 5.625rem);
+      padding: 2.5rem 1.25rem;
+      background-color: #fff;
+
+      .guide_modal_cont {
+        overflow-y: auto;
+        height: 100%;
+        padding: 0 1.25rem;
+
+        ul {
+          li {
+            + li {
+              margin-top: 1.469rem;
+              padding-top: 1.469rem;
+              border-top: 1px solid #e5e5e5;
+            }
+
+            a {
+              display: flex;
+            }
+
+            .img {
+              overflow: hidden;
+              flex-shrink: 0;
+              position: relative;
+              width: 10.625rem;
+              height: 10.625rem;
+              margin-right: 1.875rem;
+              border-radius: 0.625rem;
+
+              img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transform: translate(-50%, -50%);
+                transition: all 0.4s ease-out;
+              }
+
+              .morePic {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 2.25rem;
+                height: 2.25rem;
+                color: #fff;
+                font-size: 0.875rem;
+                font-weight: bold;
+                background-color: rgba(0, 0, 0, 0.65);
+
+                &::before {
+                  content: "+";
+                }
+              }
+            }
+
+            .text {
+              width: 100%;
+
+              p {
+                margin-top: 0.2rem;
+                margin-bottom: 1rem;
+                font-size: 1.5rem;
+                font-weight: bold;
+                transition: all 0.2s;
+              }
+
+              span {
+                color: #666;
+                font-size: 1.125rem;
+                font-weight: normal;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                max-height: 28px;
+              }
+            }
+          }
+        }
+
+        .allMore {
+          display: none;
+          height: 6.25rem;
+          margin: 2.5rem 0 5rem;
+          padding: 2.125rem 0rem;
+          font-size: 1.625rem;
+          font-weight: 500;
+          text-align: center;
+          border-radius: 55px;
+          border: solid 1px #d4d4d4;
+        }
+      }
+    }
+  }
+}
