@@ -69,6 +69,187 @@
       }
     }
   }
+
+  .swiper-list {
+    .mySwiper {
+      .swiper-list-item {
+        li {
+          position: relative;
+          // width: calc(33.33% - 2rem);
+          // margin: 0 1rem 5rem;
+          margin: 2rem 0 2rem;
+          box-sizing: border-box;
+
+          .img {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            border-radius: 20px;
+
+            img {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transform: translate(-50%, -50%);
+              transition: all 0.2s ease-out;
+              z-index: 10;
+            }
+
+            &::before {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              right: 0;
+              left: 0;
+              background-image: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0) 85%,
+                rgba(0, 0, 0, 0.2)
+              );
+              z-index: 11;
+              content: "";
+            }
+
+            &::after {
+              display: block;
+              padding-top: 100%;
+              content: "";
+            }
+          }
+
+          .text {
+            position: relative;
+            padding: 1.25rem 0 2rem !important;
+
+            h4 {
+              margin-bottom: 0.75rem;
+              font-size: 1.375rem;
+              font-weight: bold;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+            }
+
+            p {
+              font-size: 1rem;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+            }
+          }
+
+          .tagWrap {
+            display: flex;
+
+            li {
+              &:not(.hash) {
+                margin-right: 0.625rem;
+                margin-top: 0.625rem;
+                padding: 0.625rem 1.125rem;
+                font-size: 0.875rem;
+                border-radius: 21px;
+                background-color: #f3f3f3;
+                min-width: max-content;
+              }
+
+              &.hash {
+                margin-bottom: 0.4rem;
+                margin-right: 0.625rem;
+                color: #15a775;
+                font-size: 1rem;
+                font-weight: 500;
+              }
+
+              p {
+                margin: 0 0.625rem 0.4rem 0 !important;
+                border-radius: 0 !important;
+
+                margin-bottom: 0.4rem;
+                margin-right: 0.625rem;
+                color: #15a775 !important;
+                font-size: 1rem;
+                font-weight: 500;
+              }
+
+              span {
+                position: relative;
+                margin-right: 0.625rem;
+                padding-right: 0.625rem;
+                font-weight: bold;
+
+                &::after {
+                  position: absolute;
+                  right: 0;
+                  top: 50%;
+                  width: 1px;
+                  height: 0.625rem;
+                  background-color: #b8b8b8;
+                  transform: translateY(-50%);
+                  content: "";
+                }
+              }
+            }
+          }
+
+          .scrap {
+            position: absolute;
+            top: 1rem !important;
+            right: 1rem;
+            width: 2.25rem;
+            height: 2.25rem;
+            text-indent: -9999px;
+            background-image: url(../../../public/images/ic_scrap.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            z-index: 12;
+          }
+
+          &:hover {
+            .img {
+              img {
+                transform: translate(-50%, -50%) scale(1.1);
+              }
+            }
+          }
+        }
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        position: absolute !important;
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 100%;
+        background-color: $primary-color1;
+        background-repeat: no-repeat;
+        background-position: center;
+        flex-shrink: 0;
+        position: absolute !important;
+        margin-top: 0;
+        border: 1px solid #d4d4d4;
+        z-index: 10;
+        transform: translateY(-100%);
+        cursor: pointer;
+        @include flexCenter;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      .swiper-button-prev {
+        background-image: url(../../../public/images/ic_prev.png) !important;
+      }
+
+      .swiper-button-next {
+        background-image: url(../../../public/images/ic_next.png) !important;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 800px) {

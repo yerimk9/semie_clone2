@@ -7,6 +7,7 @@ import { FoodGuide } from "./types";
 import Section4 from "./components/Section4";
 import Section3 from "./components/Section3";
 import Section2 from "./components/Section2";
+import GuideDetailItem from "./components/GuideDetailItem";
 
 export default async function Home() {
   let foodItems: FoodGuide[] = [];

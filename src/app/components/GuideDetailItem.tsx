@@ -16,9 +16,11 @@ function GuideDetailItem({ item }: FoodGuideDetailItem) {
         </div>
       </Link>
       <ul className="tagWrap">
-        {item?.hashTag !== "null" ? (
+        {item?.hashTag &&
+        item.hashTag !== "null" &&
+        Array.isArray(item.hashTag) ? (
           <>
-            {item?.hashTag.map((item, idx) => (
+            {item?.hashTag?.map((item, idx) => (
               <li className="hash" key={idx}>
                 #{item}
               </li>

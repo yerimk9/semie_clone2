@@ -1,11 +1,23 @@
+"use client";
 import React from "react";
 import { FoodGuideProps } from "../types";
 import Link from "next/link";
 import Image from "next/image";
 import ic_right from "@/../public/images/right.png";
 import Filter from "./Filter";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+// import "swiper/css";
+import "swiper/css/navigation";
+// import required modules
+import { Navigation } from "swiper/modules";
+import GuideDetailItem from "./GuideDetailItem";
 
 function Section2({ list }: FoodGuideProps) {
+  const selectedItem = list[4]?.items;
+  console.log(selectedItem);
+  // console.log(list);
   return (
     <>
       <div className="title">
@@ -18,18 +30,31 @@ function Section2({ list }: FoodGuideProps) {
 
       <div className="tabMenu">
         <Filter list={["전체", "레시피", "솔루션"]} />
-        {/* <ul>
-          <li className="on">
-            <button type="button">전체</button>
-          </li>
-          <li>
-            <button type="button">레시피</button>
-          </li>
-          <li>
-            <button type="button">솔루션</button>
-          </li>
-        </ul> */}
       </div>
+
+      <ul className="swiper-list">
+        <Swiper
+          navigation={true}
+          modules={[Navigation]}
+          className="mySwiper"
+          slidesPerView={2}
+          spaceBetween={40}
+          slidesPerGroup={3}
+          loop={true}
+          speed={900}
+          breakpoints={{
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+        >
+          {selectedItem?.map((item, idx) => (
+            <SwiperSlide key={idx} className="swiper-list-item">
+              <GuideDetailItem item={item} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </ul>
     </>
   );
 }

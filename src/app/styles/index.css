@@ -2259,6 +2259,151 @@ footer p {
   background-color: #d4d4d4;
   content: "";
 }
+.section2 .swiper-list .mySwiper .swiper-list-item li {
+  position: relative;
+  margin: 2rem 0 2rem;
+  box-sizing: border-box;
+}
+.section2 .swiper-list .mySwiper .swiper-list-item li .img {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+}
+.section2 .swiper-list .mySwiper .swiper-list-item li .img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-out;
+  z-index: 10;
+}
+.section2 .swiper-list .mySwiper .swiper-list-item li .img::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 85%, rgba(0, 0, 0, 0.2));
+  z-index: 11;
+  content: "";
+}
+.section2 .swiper-list .mySwiper .swiper-list-item li .img::after {
+  display: block;
+  padding-top: 100%;
+  content: "";
+}
+.section2 .swiper-list .mySwiper .swiper-list-item li .text {
+  position: relative;
+  padding: 1.25rem 0 2rem !important;
+}
+.section2 .swiper-list .mySwiper .swiper-list-item li .text h4 {
+  margin-bottom: 0.75rem;
+  font-size: 1.375rem;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+}
+.section2 .swiper-list .mySwiper .swiper-list-item li .text p {
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+}
+.section2 .swiper-list .mySwiper .swiper-list-item li .tagWrap {
+  display: flex;
+}
+.section2 .swiper-list .mySwiper .swiper-list-item li .tagWrap li:not(.hash) {
+  margin-right: 0.625rem;
+  margin-top: 0.625rem;
+  padding: 0.625rem 1.125rem;
+  font-size: 0.875rem;
+  border-radius: 21px;
+  background-color: #f3f3f3;
+  min-width: max-content;
+}
+.section2 .swiper-list .mySwiper .swiper-list-item li .tagWrap li.hash {
+  margin-bottom: 0.4rem;
+  margin-right: 0.625rem;
+  color: #15a775;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.section2 .swiper-list .mySwiper .swiper-list-item li .tagWrap li p {
+  margin: 0 0.625rem 0.4rem 0 !important;
+  border-radius: 0 !important;
+  margin-bottom: 0.4rem;
+  margin-right: 0.625rem;
+  color: #15a775 !important;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.section2 .swiper-list .mySwiper .swiper-list-item li .tagWrap li span {
+  position: relative;
+  margin-right: 0.625rem;
+  padding-right: 0.625rem;
+  font-weight: bold;
+}
+.section2 .swiper-list .mySwiper .swiper-list-item li .tagWrap li span::after {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 1px;
+  height: 0.625rem;
+  background-color: #b8b8b8;
+  transform: translateY(-50%);
+  content: "";
+}
+.section2 .swiper-list .mySwiper .swiper-list-item li .scrap {
+  position: absolute;
+  top: 1rem !important;
+  right: 1rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  text-indent: -9999px;
+  background-image: url(../../../public/images/ic_scrap.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  z-index: 12;
+}
+.section2 .swiper-list .mySwiper .swiper-list-item li:hover .img img {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.section2 .swiper-list .mySwiper .swiper-button-next,
+.section2 .swiper-list .mySwiper .swiper-button-prev {
+  position: absolute !important;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 100%;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+  position: absolute !important;
+  margin-top: 0;
+  border: 1px solid #d4d4d4;
+  z-index: 10;
+  transform: translateY(-100%);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section2 .swiper-list .mySwiper .swiper-button-next::after,
+.section2 .swiper-list .mySwiper .swiper-button-prev::after {
+  display: none;
+}
+.section2 .swiper-list .mySwiper .swiper-button-prev {
+  background-image: url(../../../public/images/ic_prev.png) !important;
+}
+.section2 .swiper-list .mySwiper .swiper-button-next {
+  background-image: url(../../../public/images/ic_next.png) !important;
+}
 
 @media screen and (max-width: 800px) {
   .section2 .title h3 {
@@ -2333,8 +2478,8 @@ footer p {
   align-self: center;
 }
 .section3 .swiper-container-box .swiper .swiper-slide a .img img {
-  min-width: 204px;
-  min-height: 204px;
+  width: 204px;
+  height: 204px;
   border-radius: 20px;
 }
 .section3 .swiper-container-box .swiper.mySwiper2 .swiper-slide a {
