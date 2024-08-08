@@ -10,7 +10,8 @@ function Filter({ list }: FilterProps) {
   };
 
   return (
-    <div className="filter">
+    // <div className="filter">
+    <>
       <p>전체</p>
       <ul>
         {list.map((item) => (
@@ -21,7 +22,8 @@ function Filter({ list }: FilterProps) {
           </li>
         ))}
       </ul>
-    </div>
+    </>
+    // </div>
   );
 }
 

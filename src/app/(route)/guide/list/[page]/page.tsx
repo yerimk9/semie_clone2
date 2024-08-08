@@ -86,8 +86,10 @@ export default async function page({ params }: { params: { page: string } }) {
           <div className="subTitle">
             <h3>요리초보가이드</h3>
           </div>
+          <div className="filter">
+            <Filter list={["최신순", "조회순", "스크랩순"]} />
+          </div>
 
-          <Filter list={["최신순", "조회순", "스크랩순"]} />
           <ul>
             {foodItems.map((item, idx) => (
               <FoodGuideItem key={idx} item={item} />

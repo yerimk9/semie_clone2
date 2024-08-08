@@ -3,6 +3,7 @@ import { FoodGuideProps } from "../types";
 import Link from "next/link";
 import Image from "next/image";
 import ic_right from "@/../public/images/right.png";
+import Filter from "./Filter";
 
 function Section2({ list }: FoodGuideProps) {
   return (
@@ -16,7 +17,8 @@ function Section2({ list }: FoodGuideProps) {
       </div>
 
       <div className="tabMenu">
-        <ul>
+        <Filter list={["전체", "레시피", "솔루션"]} />
+        {/* <ul>
           <li className="on">
             <button type="button">전체</button>
           </li>
@@ -26,7 +28,7 @@ function Section2({ list }: FoodGuideProps) {
           <li>
             <button type="button">솔루션</button>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </>
   );

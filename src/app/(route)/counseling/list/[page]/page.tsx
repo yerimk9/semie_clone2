@@ -108,8 +108,9 @@ async function page({ params }: { params: { page: string } }) {
 
           <div className="detail_wrap">
             <div className="detail_con">
-              <Filter list={["최신순", "조회순", "스크랩순"]} />
-
+              <div className="filter">
+                <Filter list={["최신순", "조회순", "스크랩순"]} />
+              </div>
               <ul className="cardList">
                 {firstHalf.map((item, idx) => (
                   <li key={idx}>

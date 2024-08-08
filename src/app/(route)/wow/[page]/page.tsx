@@ -35,7 +35,9 @@ async function page({ params }: { params: { page: string } }) {
             </h3>
           </div>
           <div className="eventList_wrap">
-            <Filter list={["전체", "진행중", "종료", "당첨자발표"]} />
+            <div className="filter">
+              <Filter list={["전체", "진행중", "종료", "당첨자발표"]} />
+            </div>
             <ul className="event_list">
               {wowList.map((item, idx) => (
                 <li key={idx}>

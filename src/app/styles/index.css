@@ -2217,6 +2217,9 @@ footer p {
   padding-bottom: 20px;
   border-bottom: 1px solid #e5e5e5;
 }
+.section2 .tabMenu > p {
+  display: none;
+}
 .section2 .tabMenu ul {
   display: flex;
   align-items: center;
