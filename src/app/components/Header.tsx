@@ -110,32 +110,32 @@ function Header() {
         <nav className="anb">
           <ul className="depth-1">
             <li>
-              <Link href={"/"}>요리초보가이드</Link>
+              <Link href={"/guide/list/1"}>요리초보가이드</Link>
             </li>
             <li>
-              <Link href={"/"}>요리연구소</Link>
+              <Link href={"/recipe-lab/recipe/1"}>요리연구소</Link>
               <ul className="depth-2">
                 <li>
-                  <Link href={"/"}>레시피</Link>
+                  <Link href={"/recipe-lab/recipe/1"}>레시피</Link>
                 </li>
                 <li>
-                  <Link href={"/"}>솔루션</Link>
+                  <Link href={"/recipe-lab/solution/1"}>솔루션</Link>
                 </li>
               </ul>
             </li>
             <li>
-              <Link href={"/"}>요리해요</Link>
+              <Link href={"/cooking/list/1"}>요리해요</Link>
               <ul className="depth-2">
                 <li>
-                  <Link href={"/"}>요리해요</Link>
+                  <Link href={"/cooking/list/1"}>요리해요</Link>
                 </li>
                 <li>
-                  <Link href={"/"}>고민있어요</Link>
+                  <Link href={"/counseling/list/1"}>고민있어요</Link>
                 </li>
               </ul>
             </li>
             <li>
-              <Link href={"/"}>WOW이벤트</Link>
+              <Link href={"/wow/1"}>WOW이벤트</Link>
             </li>
           </ul>
         </nav>

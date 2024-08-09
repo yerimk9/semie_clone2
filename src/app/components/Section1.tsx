@@ -76,7 +76,7 @@ function Section1({ list }: FoodGuideList) {
         >
           {list.map((food, index) => (
             <SwiperSlide key={index} className="swiper-slide">
-              <Link href={"/"}>
+              <Link href={`/guide/archive/${food?.id}`}>
                 <Image src={food.items[0]?.main_img || ""} alt="img" fill />
 
                 <p className="swiper-title">{parse(food.title)}</p>
@@ -100,7 +100,7 @@ function Section1({ list }: FoodGuideList) {
         >
           {list.map((food, index) => (
             <SwiperSlide key={index} className="swiper-slide">
-              <Link href={"/"}>
+              <Link href={`/guide/archive/${food?.id}`}>
                 <div className="picture">
                   <Image src={food.items[0]?.main_img || ""} alt="img" fill />
 
@@ -153,7 +153,7 @@ function Section1({ list }: FoodGuideList) {
         >
           {list.map((food, index) => (
             <SwiperSlide key={index} className="swiper-slide">
-              <Link href={"/"}>
+              <Link href={`/guide/archive/${food?.id}`}>
                 <Image src={food.items[0]?.main_img || ""} alt="img" fill />
 
                 <p className="swiper-title">{parse(food.title)}</p>

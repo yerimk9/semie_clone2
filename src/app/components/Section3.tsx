@@ -98,7 +98,7 @@ function Section3() {
           >
             {counselingItems.map((food, index) => (
               <SwiperSlide className="swiper-slide" key={index}>
-                <Link href={"/"}>
+                <Link href={`/cooking/${food?.id}`}>
                   <div className="img">
                     <Image
                       src={food?.imgUrl}
@@ -133,7 +133,7 @@ function Section3() {
           >
             {counselingItems.map((food, index) => (
               <SwiperSlide className="swiper-slide" key={index}>
-                <Link href={"/"}>
+                <Link href={`/cooking/${food?.id}`}>
                   <div className="top_text">
                     <h4>{food?.title}</h4>
                     <p>
@@ -166,7 +166,7 @@ function Section3() {
           >
             {counselingItems.map((food, index) => (
               <SwiperSlide className="swiper-slide" key={index}>
-                <Link href={"/"}>
+                <Link href={`/cooking/${food?.id}`}>
                   <div className="img">
                     <Image
                       src={food?.imgUrl}
