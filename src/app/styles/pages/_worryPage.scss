@@ -68,6 +68,17 @@
     }
   }
 
+  .recipe_view_wrap {
+    .view_title {
+      background-color: #eff9ef;
+      background-image: url("https://semie.cooking/assets/images/common/bg_pattern_green.png");
+    }
+
+    .btn_box {
+      margin-bottom: 5rem;
+    }
+  }
+
   .worry_view_cont {
     width: 100%;
     max-width: 45rem;
@@ -235,6 +246,12 @@
     }
 
     .cooking_view_wrap {
+      .view_title {
+        background-image: none;
+      }
+    }
+
+    .recipe_view_wrap {
       .view_title {
         background-image: none;
       }

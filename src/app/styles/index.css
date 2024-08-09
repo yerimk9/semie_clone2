@@ -3730,6 +3730,13 @@ footer p {
 .labView .cooking_view_wrap .btn_box {
   margin-bottom: 5rem;
 }
+.labView .recipe_view_wrap .view_title {
+  background-color: #eff9ef;
+  background-image: url("https://semie.cooking/assets/images/common/bg_pattern_green.png");
+}
+.labView .recipe_view_wrap .btn_box {
+  margin-bottom: 5rem;
+}
 .labView .worry_view_cont {
   width: 100%;
   max-width: 45rem;
@@ -3869,6 +3876,9 @@ footer p {
     background-image: none;
   }
   .labView .cooking_view_wrap .view_title {
+    background-image: none;
+  }
+  .labView .recipe_view_wrap .view_title {
     background-image: none;
   }
   .labView .worry_view_cont {

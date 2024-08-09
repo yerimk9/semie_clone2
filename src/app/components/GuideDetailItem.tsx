@@ -6,7 +6,7 @@ import { FoodGuideDetailItem } from "../types";
 function GuideDetailItem({ item }: FoodGuideDetailItem) {
   return (
     <li>
-      <Link href={"/"}>
+      <Link href={`/recipe-lab/recipe/archive/${item?.name}`}>
         <div className="img">
           <Image src={item?.main_img} alt="" width={1280} height={1280} />
         </div>

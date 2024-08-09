@@ -1,30 +1,43 @@
+import { FoodGuideItemProps } from "@/app/types";
 import React from "react";
-import { collection, doc, getDoc, getDocs, query } from "firebase/firestore";
 import { db } from "@/firebase";
-import { CookingListItemsProps } from "@/app/types";
-import Link from "next/link";
+import { collection, getDocs, query } from "firebase/firestore";
+import Header from "@/app/components/Header";
 import Image from "next/image";
 import profileImg from "@/../public/images/profile.png";
-import Header from "@/app/components/Header";
+import Link from "next/link";
 import Footer from "@/app/components/Footer";
 
-async function page({ params }: { params: { id: string } }) {
-  let selectItem: CookingListItemsProps | undefined;
-
+async function page({ params }: { params: { name: string } }) {
+  // let selectItem: FoodGuideItemProps | undefined;
+  let selectItem;
   try {
-    const querySnapshot = await getDocs(query(collection(db, "cooking_list")));
-    const foodItems: CookingListItemsProps[] = [];
+    const querySnapshot = await getDocs(
+      query(collection(db, "food_guide_list"))
+    );
+    const foodItems: FoodGuideItemProps[] = [];
 
     querySnapshot.forEach((doc) => {
-      const data = doc.data() as CookingListItemsProps;
+      const data = doc.data() as FoodGuideItemProps;
       foodItems.push(data);
     });
 
-    selectItem = foodItems.find((item) => item.id == params.id);
+    // foodItems 배열을 순회
+    foodItems.forEach((item) => {
+      // 각 foodItem의 items 배열을 순회
+      item.items.forEach((subItem) => {
+        if (subItem.name == decodeURI(params.name)) {
+          selectItem = subItem;
+        }
+      });
+    });
+
+    console.log(selectItem);
   } catch (e) {
     console.error(e);
     return null;
   }
+
   return (
     <div>
       <Header />
@@ -35,11 +48,11 @@ async function page({ params }: { params: { id: string } }) {
             <h3>요리해요</h3>
           </div>
 
-          <div className="cooking_view_wrap">
+          <div className="recipe_view_wrap">
             <div className="view_title">
               <div className="inner">
-                <span className="label">요리해요</span>
-                <h3>{selectItem?.title}</h3>
+                <span className="label">레시피</span>
+                <h3>{selectItem?.name}</h3>
                 <p className="date">{selectItem?.date}</p>
               </div>
             </div>
@@ -47,9 +60,9 @@ async function page({ params }: { params: { id: string } }) {
             <div className="worry_view_cont">
               <div className="worry_intro">
                 <p>{selectItem?.text}</p>
-                {selectItem?.imgUrl && (
+                {selectItem?.main_img && (
                   <Image
-                    src={selectItem?.imgUrl}
+                    src={selectItem?.main_img}
                     alt=""
                     width={1080}
                     height={1440}
@@ -98,7 +111,7 @@ async function page({ params }: { params: { id: string } }) {
               </div>
             </div>
             <div className="btn_box center m-mt">
-              <Link href={"/cooking/list/1"} className="btn">
+              <Link href={"/recipe-lab/recipe/1"} className="btn">
                 목록으로
               </Link>
             </div>

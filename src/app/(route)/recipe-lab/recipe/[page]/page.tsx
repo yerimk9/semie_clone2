@@ -62,7 +62,6 @@ async function page({ params }: { params: { page: string } }) {
     const { dataList } = await pageClick(currentPage, "food_guide_list", 8);
     maxPageNumber = await getMaxPageNumber("food_guide_list", 8);
     foodItems = dataList[4]?.items;
-    console.log("AAAAA", foodItems);
   } catch (e) {
     console.log(e);
   }

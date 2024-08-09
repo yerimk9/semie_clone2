@@ -16,7 +16,6 @@ import GuideDetailItem from "./GuideDetailItem";
 
 function Section2({ list }: FoodGuideProps) {
   const selectedItem = list[4]?.items;
-  console.log(selectedItem);
   // console.log(list);
   return (
     <>

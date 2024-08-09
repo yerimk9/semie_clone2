@@ -56,19 +56,6 @@ export default async function page({ params }: { params: { page: string } }) {
   let currentPage = parseInt(params.page, 10);
   let maxPageNumber = 1;
 
-  /*  try {
-    // Firestore에서 데이터 가져오기
-    const querySnapshot = await getDocs(
-      query(collection(db, "food_guide_list"))
-    );
-
-    querySnapshot.forEach((doc) => {
-      const data = doc.data() as FoodGuide;
-      foodItems.push(data);
-    });
-  } catch (e) {
-    console.log(e);
-  } */
   try {
     const { wowList } = await pageClick(currentPage, "food_guide_list", 12);
     maxPageNumber = await getMaxPageNumber("food_guide_list", 12);
