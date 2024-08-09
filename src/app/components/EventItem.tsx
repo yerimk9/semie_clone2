@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { WowListItemProps } from "../types";
+import { WowList } from "../types";
 
-function EventItem({ item }: WowListItemProps) {
+function EventItem({ item }: WowList) {
   const getStatusClass = (status: string) => {
     switch (status) {
       case "진행중":

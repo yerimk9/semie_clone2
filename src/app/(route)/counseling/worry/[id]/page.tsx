@@ -3,7 +3,6 @@ import Header from "@/app/components/Header";
 import React from "react";
 import { collection, doc, getDoc, getDocs, query } from "firebase/firestore";
 import { db } from "@/firebase";
-import { CounselingItemsProps } from "@/app/types";
 import Image from "next/image";
 import ic_kakao2 from "@/../public/images/ic_kakao2.png";
 import ic_url from "@/../public/images/ic_url.png";

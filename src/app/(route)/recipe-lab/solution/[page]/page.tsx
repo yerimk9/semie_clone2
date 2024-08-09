@@ -11,16 +11,16 @@ import {
   query,
   startAfter,
 } from "firebase/firestore";
-import { FoodGuideProps, FoodGuidePropsProps } from "@/app/types";
 import getMaxPageNumber from "@/app/utils/getMaxPageNumber";
 import GuideDetailItem from "@/app/components/GuideDetailItem";
+import { FoodGuideItem, FoodGuideListItem } from "@/app/types";
 
 const pageClick = async (
   page: number,
   collectionName: string,
   size: number
-): Promise<{ dataList: FoodGuidePropsProps[] }> => {
-  let dataList: FoodGuideProps[] = [];
+): Promise<{ dataList: FoodGuideItem[] }> => {
+  let dataList: FoodGuideItem[] = [];
   let querySnapshot;
 
   const pageSize = size;
@@ -41,7 +41,7 @@ const pageClick = async (
   }
 
   querySnapshot.forEach((doc) => {
-    const data = doc.data() as FoodGuideProps;
+    const data = doc.data() as FoodGuideItem;
     dataList.push(data);
   });
 
@@ -51,14 +51,15 @@ const pageClick = async (
 };
 
 async function page({ params }: { params: { page: string } }) {
-  let foodItems: FoodGuideProps[] = [];
+  let foodItems: FoodGuideItem[] = [];
   let currentPage = parseInt(params.page, 10);
   let maxPageNumber = 1;
 
   try {
     const { dataList } = await pageClick(currentPage, "food_guide_list", 8);
     maxPageNumber = await getMaxPageNumber("food_guide_list", 8);
-    foodItems = dataList[2]?.items;
+    // foodItems = dataList[2]?.items;
+    foodItems = dataList;
   } catch (e) {
     console.log(e);
   }

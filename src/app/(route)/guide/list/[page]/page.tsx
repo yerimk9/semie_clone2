@@ -2,7 +2,6 @@ import Filter from "@/app/components/Filter";
 import FoodGuideItem from "@/app/components/FoodGuideItem";
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
-import { FoodGuide } from "@/app/types";
 import getMaxPageNumber from "@/app/utils/getMaxPageNumber";
 import { db } from "@/firebase";
 import {

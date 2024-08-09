@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { CookingListItemProps } from "../types";
 
-function CookingListItem({ item }: CookingListItemProps) {
+function CookingListItem({ item }: { item: CookingListItemProps }) {
   return (
     <>
       <Link href={`/cooking/${item?.id}`}>

@@ -2,10 +2,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { FoodGuideItemProps } from "../types";
+import { FoodGuideListItem } from "../types";
 import parse from "html-react-parser";
 
-function FoodGuideItem({ item }: FoodGuideItemProps) {
+function FoodGuideItem({ item }: { item: FoodGuideListItem }) {
   return (
     <li>
       <Link href={`/guide/archive/${item.id}`}>

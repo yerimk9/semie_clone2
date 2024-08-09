@@ -3,10 +3,10 @@ import Link from "next/link";
 import React, { useState } from "react";
 import ic_right from "../../../public/images/right.png";
 import il_samie_1 from "../../../public/svgs/il_samie_1-1.svg";
-import { GuideModalProps } from "../types";
+import { FoodGuideModal } from "../types";
 import parse from "html-react-parser";
 
-function GuideModal({ list, isModal, setIsModal }: GuideModalProps) {
+function GuideModal({ list, isModal, setIsModal }: FoodGuideModal) {
   return (
     <div className={`guideWrap ${isModal && "block"}`}>
       <div className="guide_modal">

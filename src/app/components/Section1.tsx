@@ -5,12 +5,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import Image from "next/image";
 import logo from "../../../public/images/logo.png";
-import { FoodGuideProps } from "../types";
 import Link from "next/link";
 import GuideModal from "./GuideModal";
 import parse from "html-react-parser";
+import { FoodGuideList } from "../types";
 
-function Section1({ list }: FoodGuideProps) {
+function Section1({ list }: FoodGuideList) {
   // function Section1() {
   const [slideIndex, setSlideIndex] = useState(1);
   const [isModal, setIsModal] = useState(false);
@@ -79,7 +79,8 @@ function Section1({ list }: FoodGuideProps) {
           {list.map((food, index) => (
             <SwiperSlide key={index} className="swiper-slide">
               <Link href={"/"}>
-                <Image src={food["main_img"]} alt="img" fill />
+                {/* <Image src={food["main_img"]} alt="img" fill /> */}
+                <Image src={food.items[0]?.main_img || ""} alt="img" fill />
 
                 <p className="swiper-title">{parse(food.title)}</p>
                 <div className="totalPic">
@@ -104,7 +105,8 @@ function Section1({ list }: FoodGuideProps) {
             <SwiperSlide key={index} className="swiper-slide">
               <Link href={"/"}>
                 <div className="picture">
-                  <Image src={food["main_img"]} alt="img" fill />
+                  {/* <Image src={food["main_img"]} alt="img" fill /> */}
+                  <Image src={food.items[0]?.main_img || ""} alt="img" fill />
 
                   <p className="swiper-title">{parse(food.title)}</p>
                   <div className="totalPic">
@@ -115,7 +117,8 @@ function Section1({ list }: FoodGuideProps) {
                 <ul className="thumb">
                   <li>
                     <Image
-                      src={food["main_img"]}
+                      // src={food["main_img"]}
+                      src={food.items[0]?.main_img || ""}
                       alt="img"
                       width={125}
                       height={125}
@@ -123,7 +126,8 @@ function Section1({ list }: FoodGuideProps) {
                   </li>
                   <li>
                     <Image
-                      src={food["main_img"]}
+                      // src={food["main_img"]}
+                      src={food.items[0]?.main_img || ""}
                       alt="img"
                       width={125}
                       height={125}
@@ -131,7 +135,8 @@ function Section1({ list }: FoodGuideProps) {
                   </li>
                   <li>
                     <Image
-                      src={food["main_img"]}
+                      // src={food["main_img"]}
+                      src={food.items[0]?.main_img || ""}
                       alt="img"
                       width={125}
                       height={125}
@@ -156,7 +161,8 @@ function Section1({ list }: FoodGuideProps) {
           {list.map((food, index) => (
             <SwiperSlide key={index} className="swiper-slide">
               <Link href={"/"}>
-                <Image src={food["main_img"]} alt="img" fill />
+                {/* <Image src={food["main_img"]} alt="img" fill /> */}
+                <Image src={food.items[0]?.main_img || ""} alt="img" fill />
 
                 <p className="swiper-title">{parse(food.title)}</p>
 

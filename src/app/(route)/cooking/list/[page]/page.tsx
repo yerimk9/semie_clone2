@@ -15,7 +15,6 @@ import {
   startAfter,
 } from "firebase/firestore";
 import { db } from "@/firebase";
-import { CookingListItemsProps } from "@/app/types";
 import getMaxPageNumber from "@/app/utils/getMaxPageNumber";
 
 const pageClick = async (

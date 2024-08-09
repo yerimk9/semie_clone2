@@ -4,14 +4,14 @@ import Image from "next/image";
 import React from "react";
 import il_wow from "../../../../../public/images/il_wow.png";
 import EventItem from "@/app/components/EventItem";
-import { WowListItemProps } from "@/app/types";
 import Filter from "@/app/components/Filter";
 import Link from "next/link";
 import getMaxPageNumber from "@/app/utils/getMaxPageNumber";
 import pageClick from "@/app/utils/pageClick";
+import { WowList } from "@/app/types";
 
 async function page({ params }: { params: { page: string } }) {
-  let wowList: WowListItemProps["item"][] = [];
+  let wowList: WowList[] = [];
   let currentPage = parseInt(params.page, 10);
   let maxPageNumber = 1;
 

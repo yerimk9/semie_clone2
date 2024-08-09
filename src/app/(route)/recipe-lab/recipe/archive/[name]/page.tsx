@@ -1,4 +1,3 @@
-import { FoodGuideItemProps } from "@/app/types";
 import React from "react";
 import { db } from "@/firebase";
 import { collection, getDocs, query } from "firebase/firestore";
@@ -8,25 +7,26 @@ import profileImg from "@/../public/images/profile.png";
 import Link from "next/link";
 import Footer from "@/app/components/Footer";
 import parse from "html-react-parser";
+import { FoodGuideItem, FoodGuideListItem } from "@/app/types";
 
 async function page({ params }: { params: { name: string } }) {
-  // let selectItem: FoodGuideItemProps | undefined;
-  let selectItem;
+  let selectItem: FoodGuideItem | undefined = undefined;
+
   try {
     const querySnapshot = await getDocs(
       query(collection(db, "food_guide_list"))
     );
-    const foodItems: FoodGuideItemProps[] = [];
+    const foodItems: FoodGuideListItem[] = [];
 
     querySnapshot.forEach((doc) => {
-      const data = doc.data() as FoodGuideItemProps;
+      const data = doc.data() as FoodGuideListItem;
       foodItems.push(data);
     });
 
     // foodItems 배열을 순회
     foodItems.forEach((item) => {
       // 각 foodItem의 items 배열을 순회
-      item.items.forEach((subItem) => {
+      item.items.forEach((subItem: FoodGuideItem) => {
         if (subItem.name == decodeURI(params.name)) {
           selectItem = subItem;
         }

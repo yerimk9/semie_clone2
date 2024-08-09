@@ -1,7 +1,6 @@
 import React from "react";
 import { collection, doc, getDoc, getDocs, query } from "firebase/firestore";
 import { db } from "@/firebase";
-import { CookingListItemsProps } from "@/app/types";
 import Link from "next/link";
 import Image from "next/image";
 import profileImg from "@/../public/images/profile.png";

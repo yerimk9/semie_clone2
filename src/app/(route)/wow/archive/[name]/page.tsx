@@ -1,6 +1,5 @@
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
-import { WowListItemProps } from "@/app/types";
 import { db } from "@/firebase";
 import { collection, getDocs, query } from "firebase/firestore";
 import Image from "next/image";
@@ -9,15 +8,17 @@ import il_wow from "@/../public/images/il_wow.png";
 import Link from "next/link";
 import EventNotice from "@/app/components/EventNotice";
 import addOneDayToDate from "@/app/utils/addOneDayToDate";
+import { WowListItem } from "@/app/types";
 
 async function page({ params }: { params: { name: string } }) {
-  let selectItem: WowListItemProps | undefined;
+  let selectItem: WowListItem | undefined;
+
   try {
     const querySnapshot = await getDocs(query(collection(db, "wow")));
-    const foodItems: WowListItemProps[] = [];
+    const foodItems: WowListItem[] = [];
 
     querySnapshot.forEach((doc) => {
-      const data = doc.data() as WowListItemProps;
+      const data = doc.data() as WowListItem;
       foodItems.push(data);
     });
 
@@ -39,6 +40,10 @@ async function page({ params }: { params: { name: string } }) {
         return "";
     }
   };
+
+  if (!selectItem) {
+    return <div>데이터를 불러올 수 없습니다.</div>;
+  }
 
   return (
     <div>

@@ -8,7 +8,6 @@ import ic_url from "@/../public/images/ic_url.png";
 import GuideDetailItem from "@/app/components/GuideDetailItem";
 import { collection, doc, getDoc, getDocs, query } from "firebase/firestore";
 import { db } from "@/firebase";
-import { FoodGuide } from "@/app/types";
 import parse from "html-react-parser";
 
 async function page({ params }: { params: number }) {

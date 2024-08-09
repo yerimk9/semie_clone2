@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { FoodGuideDetailItem } from "../types";
+import { FoodGuideItem } from "../types";
 
-function GuideDetailItem({ item }: FoodGuideDetailItem) {
+function GuideDetailItem({ item }: { item: FoodGuideItem }) {
   return (
     <li>
       <Link href={`/recipe-lab/recipe/archive/${item?.name}`}>

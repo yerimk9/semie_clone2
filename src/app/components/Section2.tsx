@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { FoodGuideProps } from "../types";
 import Link from "next/link";
 import Image from "next/image";
 import ic_right from "@/../public/images/right.png";
@@ -13,8 +12,9 @@ import "swiper/css/navigation";
 // import required modules
 import { Navigation } from "swiper/modules";
 import GuideDetailItem from "./GuideDetailItem";
+import { FoodGuideList } from "../types";
 
-function Section2({ list }: FoodGuideProps) {
+function Section2({ list }: FoodGuideList) {
   const selectedItem = list[4]?.items;
   // console.log(list);
   return (

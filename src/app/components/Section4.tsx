@@ -5,14 +5,12 @@ import React from "react";
 import il_wow from "@/../public/images/il_wow.png";
 import ic_right from "@/../public/images/right.png";
 
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-// Import Swiper styles
+
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-// import required modules
 
 function Section4() {
   return (
@@ -34,10 +32,6 @@ function Section4() {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        // pagination={{
-        //   clickable: true,
-        //   type: "fraction",
-        // }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"

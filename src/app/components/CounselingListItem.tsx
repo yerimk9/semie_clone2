@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { CounselingItemProps } from "../types";
+import { CounselingList } from "../types";
 
-function CounselingListItem({ item }: CounselingItemProps) {
+function CounselingListItem({ item }: CounselingList) {
   return (
     <>
       <Link href={`/counseling/worry/${item?.id}`}>
