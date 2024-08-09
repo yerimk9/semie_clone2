@@ -7,55 +7,21 @@ import il_smile2 from "@/../public/images/il_samie_2.png";
 import il_write from "@/../public/images/ic_write.png";
 import CookingListItem from "@/app/components/CookingListItem";
 import Filter from "@/app/components/Filter";
-import {
-  collection,
-  getDocs,
-  limit,
-  query,
-  startAfter,
-} from "firebase/firestore";
-import { db } from "@/firebase";
 import getMaxPageNumber from "@/app/utils/getMaxPageNumber";
 import { CookingListItemProps } from "@/app/types";
 import Pagination from "@/app/components/Pagination";
-
-const pageClick = async (
-  page: number,
-  collectionName: string,
-  size: number
-): Promise<{ dataList: CookingListItemProps[] }> => {
-  let dataList: CookingListItemProps[] = [];
-  let querySnapshot;
-
-  const pageSize = size;
-
-  const baseQuery = query(collection(db, collectionName), limit(pageSize));
-
-  if (page === 1) {
-    querySnapshot = await getDocs(baseQuery);
-  } else {
-    const prevPageSnapshot = await getDocs(baseQuery);
-    const lastDoc = prevPageSnapshot.docs[prevPageSnapshot.docs.length - 1];
-
-    querySnapshot = await getDocs(query(baseQuery, startAfter(lastDoc)));
-  }
-
-  querySnapshot.forEach((doc) => {
-    const data = doc.data() as CookingListItemProps;
-    dataList.push(data);
-  });
-
-  return {
-    dataList,
-  };
-};
+import pageClick from "@/app/utils/pageClick";
 
 async function page({ params }: { params: { page: string } }) {
   let cookingItems: CookingListItemProps[] = [];
   let currentPage = parseInt(params.page, 10);
   let maxPageNumber = 1;
   try {
-    const { dataList } = await pageClick(currentPage, "cooking_list", 16);
+    const { dataList } = await pageClick<CookingListItemProps>(
+      currentPage,
+      "cooking_list",
+      16
+    );
     maxPageNumber = await getMaxPageNumber("cooking_list", 16);
     cookingItems = dataList;
   } catch (e) {

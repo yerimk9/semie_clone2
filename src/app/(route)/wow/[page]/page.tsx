@@ -5,54 +5,10 @@ import React from "react";
 import il_wow from "../../../../../public/images/il_wow.png";
 import EventItem from "@/app/components/EventItem";
 import Filter from "@/app/components/Filter";
-import Link from "next/link";
 import getMaxPageNumber from "@/app/utils/getMaxPageNumber";
 import { WowListItem } from "@/app/types";
-import { db } from "@/firebase";
-import {
-  collection,
-  getDocs,
-  limit,
-  orderBy,
-  query,
-  startAfter,
-} from "firebase/firestore";
 import Pagination from "@/app/components/Pagination";
-
-const pageClick = async (
-  page: number,
-  collectionName: string,
-  size: number
-) => {
-  let wowList: any["item"][] = [];
-  let querySnapshot;
-
-  const pageSize = size;
-
-  const baseQuery = query(
-    collection(db, collectionName),
-    orderBy("date"),
-    limit(pageSize)
-  );
-
-  if (page === 1) {
-    querySnapshot = await getDocs(baseQuery);
-  } else {
-    const prevPageSnapshot = await getDocs(baseQuery);
-    const lastDoc = prevPageSnapshot.docs[prevPageSnapshot.docs.length - 1];
-
-    querySnapshot = await getDocs(query(baseQuery, startAfter(lastDoc)));
-  }
-
-  querySnapshot.forEach((doc) => {
-    const data = doc.data();
-    wowList.push(data);
-  });
-
-  return {
-    wowList,
-  };
-};
+import pageClick from "@/app/utils/pageClick";
 
 async function page({ params }: { params: { page: string } }) {
   let wowList: WowListItem[] = [];
@@ -60,9 +16,9 @@ async function page({ params }: { params: { page: string } }) {
   let maxPageNumber = 1;
 
   try {
-    const { wowList: newWowList } = await pageClick(currentPage, "wow", 9);
+    const { dataList } = await pageClick<WowListItem>(currentPage, "wow", 9);
     maxPageNumber = await getMaxPageNumber("wow", 9);
-    wowList = newWowList;
+    wowList = dataList;
   } catch (e) {
     console.log(e);
   }

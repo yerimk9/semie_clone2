@@ -3,7 +3,6 @@ import { db } from "@/firebase";
 import { collection, getDocs, query } from "firebase/firestore";
 import Header from "@/app/components/Header";
 import Image from "next/image";
-import profileImg from "@/../public/images/profile.png";
 import Link from "next/link";
 import Footer from "@/app/components/Footer";
 import parse from "html-react-parser";

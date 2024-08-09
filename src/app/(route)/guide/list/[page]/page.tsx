@@ -5,51 +5,8 @@ import Header from "@/app/components/Header";
 import Pagination from "@/app/components/Pagination";
 import { FoodGuideListItem } from "@/app/types";
 import getMaxPageNumber from "@/app/utils/getMaxPageNumber";
-import { db } from "@/firebase";
-import {
-  collection,
-  getDocs,
-  limit,
-  query,
-  startAfter,
-} from "firebase/firestore";
-import Link from "next/link";
+import pageClick from "@/app/utils/pageClick";
 import React from "react";
-
-const pageClick = async (
-  page: number,
-  collectionName: string,
-  size: number
-): Promise<{ wowList: FoodGuideListItem[] }> => {
-  let wowList: FoodGuideListItem[] = [];
-  let querySnapshot;
-
-  const pageSize = size;
-
-  const baseQuery = query(
-    collection(db, collectionName),
-    // orderBy("date"),
-    limit(pageSize)
-  );
-
-  if (page === 1) {
-    querySnapshot = await getDocs(baseQuery);
-  } else {
-    const prevPageSnapshot = await getDocs(baseQuery);
-    const lastDoc = prevPageSnapshot.docs[prevPageSnapshot.docs.length - 1];
-
-    querySnapshot = await getDocs(query(baseQuery, startAfter(lastDoc)));
-  }
-
-  querySnapshot.forEach((doc) => {
-    const data = doc.data() as FoodGuideListItem;
-    wowList.push(data);
-  });
-
-  return {
-    wowList,
-  };
-};
 
 export default async function page({ params }: { params: { page: string } }) {
   let foodItems: FoodGuideListItem[] = [];
@@ -57,9 +14,15 @@ export default async function page({ params }: { params: { page: string } }) {
   let maxPageNumber = 1;
 
   try {
-    const { wowList } = await pageClick(currentPage, "food_guide_list", 12);
+    // const { wowList } = await pageClick(currentPage, "food_guide_list", 12);
+    const { dataList } = await pageClick<FoodGuideListItem>(
+      currentPage,
+      "food_guide_list",
+      8
+    );
+
     maxPageNumber = await getMaxPageNumber("food_guide_list", 12);
-    foodItems = wowList;
+    foodItems = dataList;
   } catch (e) {
     console.log(e);
   }

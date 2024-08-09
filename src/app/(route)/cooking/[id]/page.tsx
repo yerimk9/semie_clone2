@@ -3,7 +3,6 @@ import { collection, getDocs, query } from "firebase/firestore";
 import { db } from "@/firebase";
 import Link from "next/link";
 import Image from "next/image";
-import profileImg from "@/../public/images/profile.png";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import { CookingListItemProps } from "@/app/types";

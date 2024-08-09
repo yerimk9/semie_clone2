@@ -4,7 +4,6 @@ import React from "react";
 import { collection, getDocs, query } from "firebase/firestore";
 import { db } from "@/firebase";
 import Image from "next/image";
-import profileImg from "@/../public/images/profile.png";
 import Link from "next/link";
 import { CounselingListItemProps } from "@/app/types";
 import ReviewBox from "@/app/components/ReviewBox";

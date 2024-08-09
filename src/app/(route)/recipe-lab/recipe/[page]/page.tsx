@@ -6,48 +6,10 @@ import React from "react";
 import il_samie_key from "@/../public/images/il_samie_key.png";
 import Filter from "@/app/components/Filter";
 import GuideDetailItem from "@/app/components/GuideDetailItem";
-import { db } from "@/firebase";
-import {
-  collection,
-  getDocs,
-  limit,
-  query,
-  startAfter,
-} from "firebase/firestore";
 import getMaxPageNumber from "@/app/utils/getMaxPageNumber";
 import { FoodGuideItem } from "@/app/types";
 import Pagination from "@/app/components/Pagination";
-
-const pageClick = async (
-  page: number,
-  collectionName: string,
-  size: number
-): Promise<{ dataList: FoodGuideItem[] }> => {
-  let dataList: FoodGuideItem[] = [];
-  let querySnapshot;
-
-  const pageSize = size;
-
-  const baseQuery = query(collection(db, collectionName), limit(pageSize));
-
-  if (page === 1) {
-    querySnapshot = await getDocs(baseQuery);
-  } else {
-    const prevPageSnapshot = await getDocs(baseQuery);
-    const lastDoc = prevPageSnapshot.docs[prevPageSnapshot.docs.length - 1];
-
-    querySnapshot = await getDocs(query(baseQuery, startAfter(lastDoc)));
-  }
-
-  querySnapshot.forEach((doc) => {
-    const data = doc.data() as FoodGuideItem;
-    dataList.push(data);
-  });
-
-  return {
-    dataList,
-  };
-};
+import pageClick from "@/app/utils/pageClick";
 
 async function page({ params }: { params: { page: string } }) {
   let foodItems: FoodGuideItem[] = [];
@@ -55,7 +17,11 @@ async function page({ params }: { params: { page: string } }) {
   let maxPageNumber = 1;
 
   try {
-    const { dataList } = await pageClick(currentPage, "food_guide_list", 8);
+    const { dataList } = await pageClick<FoodGuideItem>(
+      currentPage,
+      "food_guide_list",
+      8
+    );
     maxPageNumber = await getMaxPageNumber("food_guide_list", 8);
     foodItems = (dataList[4] as any)?.items;
   } catch (e) {
