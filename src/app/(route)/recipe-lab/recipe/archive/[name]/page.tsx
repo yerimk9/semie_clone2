@@ -10,7 +10,7 @@ import parse from "html-react-parser";
 import { FoodGuideItem, FoodGuideListItem } from "@/app/types";
 
 async function page({ params }: { params: { name: string } }) {
-  let selectItem: FoodGuideItem | undefined = undefined;
+  let selectItem: FoodGuideItem | any;
 
   try {
     const querySnapshot = await getDocs(
