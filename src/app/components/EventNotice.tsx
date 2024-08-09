@@ -1,10 +1,17 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import ic_down from "@/../public/images/ic_down.png";
 
 function EventNotice() {
+  const [onOpen, setOnOpen] = useState(false);
+
+  const onToggle = () => {
+    setOnOpen((prev) => !prev);
+  };
+
   return (
-    <div className={`event_notice is-active`}>
+    <div className={`event_notice ${onOpen && "is-active"}`}>
       <h4 className="event_notice_title">주의사항</h4>
       <ul className="event_notice_content">
         <li>
@@ -50,7 +57,11 @@ function EventNotice() {
         </li>
       </ul>
       <div className="event_notice_func">
-        <button type="button" className="btn_arrow_lg show-text">
+        <button
+          type="button"
+          className="btn_arrow_lg show-text"
+          onClick={onToggle}
+        >
           더보기
           <Image src={ic_down} alt="" width={20} height={20} />
         </button>
