@@ -258,30 +258,13 @@ img {
   }
 }
 
-// .swiper-list-item {
-//   // overflow: hidden;
-//   position: relative;
-//   width: 100%;
-//   border-radius: 20px;
+.mb_hide {
+  display: block;
+}
 
-//   img {
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//     transform: translate(-50%, -50%);
-//     transition: all 0.2s ease-out;
-//     z-index: 10;
-
-//     &:hover {
-//       img {
-//         transform: translate(-50%, -50%) scale(1.1);
-//       }
-//     }
-//   }
-// }
+.mb_show {
+  display: none;
+}
 
 @media screen and (max-width: 800px) {
   .section1 {
@@ -437,5 +420,13 @@ img {
 
   .section2 {
     padding: 2.25rem 0;
+  }
+
+  .mb_hide {
+    display: none;
+  }
+
+  .mb_show {
+    display: block;
   }
 }

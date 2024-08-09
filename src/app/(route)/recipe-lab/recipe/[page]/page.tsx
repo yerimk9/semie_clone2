@@ -15,14 +15,14 @@ import {
   query,
   startAfter,
 } from "firebase/firestore";
-import { FoodGuideProps, FoodGuidePropsProps } from "@/app/types";
+import { FoodGuideProps, FoodGuideProps } from "@/app/types";
 import getMaxPageNumber from "@/app/utils/getMaxPageNumber";
 
 const pageClick = async (
   page: number,
   collectionName: string,
   size: number
-): Promise<{ dataList: FoodGuidePropsProps[] }> => {
+): Promise<{ dataList: FoodGuideProps[] }> => {
   let dataList: FoodGuideProps[] = [];
   let querySnapshot;
 
