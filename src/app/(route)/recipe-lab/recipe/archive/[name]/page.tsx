@@ -7,6 +7,7 @@ import Image from "next/image";
 import profileImg from "@/../public/images/profile.png";
 import Link from "next/link";
 import Footer from "@/app/components/Footer";
+import parse from "html-react-parser";
 
 async function page({ params }: { params: { name: string } }) {
   // let selectItem: FoodGuideItemProps | undefined;
@@ -58,8 +59,11 @@ async function page({ params }: { params: { name: string } }) {
             </div>
 
             <div className="worry_view_cont">
+              <div className="view_cont_tit">
+                <h4>{selectItem?.desc}</h4>
+                <p>{parse(selectItem?.subDesc)}</p>
+              </div>
               <div className="worry_intro">
-                <p>{selectItem?.text}</p>
                 {selectItem?.main_img && (
                   <Image
                     src={selectItem?.main_img}
