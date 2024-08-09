@@ -3879,9 +3879,17 @@ footer p {
   color: #fff;
   background-color: #15a775;
 }
+.eventView .title .label_list .label.green {
+  color: #15a775;
+  background-color: #eff9ef;
+}
 .eventView .title .label_list .label.gray {
   color: #666;
   background-color: #e5e5e5;
+}
+.eventView .title .label_list .label.orange {
+  color: #fb9622;
+  background-color: #fff9e2;
 }
 .eventView .title .date {
   color: #666;

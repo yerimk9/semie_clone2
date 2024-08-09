@@ -8,6 +8,7 @@ import React from "react";
 import il_wow from "@/../public/images/il_wow.png";
 import Link from "next/link";
 import EventNotice from "@/app/components/EventNotice";
+import addOneDayToDate from "@/app/utils/addOneDayToDate";
 
 async function page({ params }: { params: { name: string } }) {
   let selectItem: WowListItemProps | undefined;
@@ -26,6 +27,19 @@ async function page({ params }: { params: { name: string } }) {
     return null;
   }
 
+  const getStatusClass = (status: string) => {
+    switch (status) {
+      case "진행중":
+        return "green";
+      case "종료":
+        return "gray";
+      case "당첨자 발표":
+        return "orange";
+      default:
+        return "";
+    }
+  };
+
   return (
     <div>
       <Header />
@@ -41,26 +55,24 @@ async function page({ params }: { params: { name: string } }) {
           <div className="title">
             <div className="label_list">
               <span className="label default">이벤트</span>
-              <span className="label gray">종료</span>
+              <span className={`label ${getStatusClass(selectItem["status"])}`}>
+                {selectItem?.status}
+              </span>
             </div>
-            <h3>더! 즐거워진 즐요랩(LAB) 시즌2!</h3>
-            <p className="date">2024.06.13 ~ 2024.06.23</p>
+            <h3>{selectItem?.title}</h3>
+            <p className="date">{selectItem?.date}</p>
           </div>
           <div className="topBanner">
             <Image
               className="mb_hide"
-              src={
-                "https://semie.cooking/image/post/event/ie/ba/cafuczad/140455961tbuu.jpg"
-              }
+              src={selectItem?.images[0]}
               alt=""
               width={1496}
               height={500}
             />
             <Image
               className="mb_show"
-              src={
-                "https://semie.cooking/image/post/event/ie/ba/cafuczad/140455965ques.jpg"
-              }
+              src={selectItem?.images[1]}
               alt=""
               width={690}
               height={518}
@@ -72,13 +84,13 @@ async function page({ params }: { params: { name: string } }) {
               <dl className="event_info">
                 <div className="event_info_item">
                   <dt className="event_info_dt">진행일자</dt>
-                  <dd className="event_info_dd">2024.06.24 ~ 2024.07.04</dd>
+                  <dd className="event_info_dd">{selectItem?.date}</dd>
                 </div>
 
                 <div className="event_info_item">
                   <dt className="event_info_dt">당첨자 발표</dt>
                   <dd className="event_info_dd">
-                    <p>(선정자 발표) 2024.07.09(화)</p>
+                    <p>(선정자 발표) {addOneDayToDate(selectItem["date"])}</p>
                     <span className="event_info_noti">
                       {" "}
                       진행일자 내, 아래 신청하기 url을 통해 접수한 인원 대상,
