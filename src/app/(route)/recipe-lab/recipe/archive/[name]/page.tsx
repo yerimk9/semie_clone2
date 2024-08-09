@@ -51,7 +51,7 @@ async function page({ params }: { params: { name: string } }) {
           <div className="recipe_view_wrap">
             <div className="view_title">
               <div className="inner">
-                <span className="label">레시피</span>
+                <span className="label">레시피 / 솔루션</span>
                 <h3>{selectItem?.name}</h3>
                 <p className="date">{selectItem?.date}</p>
               </div>
