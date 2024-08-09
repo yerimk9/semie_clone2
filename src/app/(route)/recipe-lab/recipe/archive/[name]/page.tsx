@@ -61,8 +61,19 @@ async function page({ params }: { params: { name: string } }) {
             <div className="worry_view_cont">
               <div className="view_cont_tit">
                 <h4>{selectItem?.desc}</h4>
-                <p>{parse(selectItem?.subDesc)}</p>
+                <p>{parse(selectItem?.subDesc || "")}</p>
               </div>
+
+              {(selectItem?.mainH || selectItem?.mainT) && (
+                <>
+                  <div className="scrap_line"></div>
+
+                  <div className="view_cont_tit">
+                    <h4>{parse(selectItem?.mainH || "")}</h4>
+                    <p>{parse(selectItem?.mainT || "")}</p>
+                  </div>
+                </>
+              )}
               <div className="worry_intro">
                 {selectItem?.main_img && (
                   <Image
@@ -73,7 +84,6 @@ async function page({ params }: { params: { name: string } }) {
                   />
                 )}
               </div>
-              <div className="view_tag_wrap"></div>
 
               <div className="comment_wrap">
                 <div className="total">
