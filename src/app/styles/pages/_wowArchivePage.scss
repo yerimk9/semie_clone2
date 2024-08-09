@@ -148,15 +148,14 @@
       }
     }
   }
+}
+.btn_box {
+  &.center {
+    text-align: center;
+  }
 
-  .btn_box {
-    &.center {
-      text-align: center;
-    }
-
-    &.m-mt {
-      margin-top: 5rem;
-    }
+  &.m-mt {
+    margin-top: 5rem;
   }
 }
 

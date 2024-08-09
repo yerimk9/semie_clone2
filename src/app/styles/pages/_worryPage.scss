@@ -47,6 +47,10 @@
         background-color: #86caf3;
       }
     }
+
+    .btn_box {
+      margin-bottom: 5rem;
+    }
   }
 
   .worry_view_cont {
@@ -87,6 +91,9 @@
         margin-bottom: 1.875rem;
         font-size: 1.375rem;
         font-weight: 800;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
 
         span {
           color: #15a775;
@@ -178,93 +185,82 @@
       }
     }
   }
-  @media screen and (max-width: 800px) {
-    .labView {
-      padding-top: 7.5rem;
-    }
+}
+@media screen and (max-width: 800px) {
+  .labView {
+    padding-top: 7.5rem;
   }
+}
 
-  @media screen and (max-width: 560px) {
-    .labView {
-      padding-top: 5.625rem;
+@media screen and (max-width: 560px) {
+  .labView {
+    padding-top: 5.625rem;
 
+    .view_title {
+      .inner {
+        max-width: 100%;
+        padding: 0 1.725rem;
+      }
+
+      h3 {
+        font-size: 1.9rem;
+        line-height: 2.3rem;
+      }
+
+      .date {
+        margin-top: 1.175rem;
+      }
+    }
+
+    .worry_view_wrap {
       .view_title {
-        .inner {
-          max-width: 100%;
-          padding: 0 1.725rem;
-        }
+        background-image: none;
+      }
+    }
 
-        h3 {
-          font-size: 1.9rem;
-          line-height: 2.3rem;
-        }
-
-        .date {
-          margin-top: 1.175rem;
+    .worry_view_cont {
+      padding: 3.75rem 5rem;
+      .worry_intro {
+        img {
+          margin-top: 1.875rem;
+          margin-bottom: 1.875rem;
         }
       }
 
-      .worry_view_wrap {
-        .view_title {
-          background-image: none;
+      .comment_wrap {
+        margin-top: 2.5rem;
+        padding-top: 2.5rem;
+
+        .profile {
+          width: 2.5rem;
+          height: 2.5rem;
+          margin-right: 1.25rem;
         }
-      }
 
-      .worry_view_cont {
-        .worry_intro {
-          p {
-            font-size: 2rem;
-          }
-
-          img {
-            margin-top: 1.875rem;
-            margin-bottom: 1.875rem;
+        .cmt_login {
+          .loginFirst {
+            padding: 1rem 1.5rem;
           }
         }
 
-        .comment_wrap {
+        .cmt_box {
           margin-top: 2.5rem;
-          padding-top: 2.5rem;
 
-          .total {
-            margin-bottom: 2.5rem;
-            font-size: 2.25rem;
-          }
+          .cmt {
+            .name {
+              margin-bottom: 1rem;
+              font-size: 1.2rem;
 
-          .profile {
-            width: 3.5rem;
-            height: 3.5rem;
-            margin-right: 1.25rem;
-          }
-
-          .cmt_login {
-            .loginFirst {
-              padding: 1.625rem 2.625rem;
-              font-size: 1.875rem;
-            }
-          }
-
-          .cmt_box {
-            margin-top: 2.5rem;
-
-            .cmt {
-              .name {
-                margin-bottom: 1rem;
-                font-size: 1.875rem;
-
-                .date {
-                  font-size: 1.5rem;
-
-                  &::before {
-                    height: 1rem;
-                  }
+              .date {
+                &::before {
+                  height: 1rem;
                 }
               }
+            }
 
-              .text {
-                margin-bottom: 1rem;
-                font-size: 1.875rem;
-              }
+            .text {
+              margin-bottom: 1rem;
+              font-size: 1.175rem;
             }
           }
         }

@@ -103,7 +103,7 @@ async function page({ params }: { params: { id: string } }) {
               </div>
             </div>
             <div className="btn_box center m-mt">
-              <Link href={"/"} className="btn">
+              <Link href={"/counseling/list/1"} className="btn">
                 목록으로
               </Link>
             </div>
