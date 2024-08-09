@@ -48,6 +48,7 @@ async function page({ params }: { params: { id: string } }) {
                 <p className="date">{selectItem?.date}</p>
               </div>
             </div>
+
             <div className="worry_view_cont">
               <div className="worry_intro">
                 <p>{selectItem?.text}</p>
@@ -79,10 +80,33 @@ async function page({ params }: { params: { id: string } }) {
                     <Link href={"/"}>로그인</Link>하시고 댓글을 남겨보세요.
                   </div>
                 </div>
-                <div className="cmt_box"></div>
+                <div className="cmt_box">
+                  <div className="profile">
+                    <Image
+                      src={profileImg}
+                      alt="profile"
+                      width={30}
+                      height={30}
+                    />
+                  </div>
+                  <div className="cmt">
+                    <div className="name">
+                      샘표 연구원
+                      <span className="date">2024-08-05 08:37</span>
+                    </div>
+
+                    <div className="text">
+                      안녕하세요? 샘표 우리맛 연구원입니다!
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="btn_box center lg-mb m-mt"></div>
+            <div className="btn_box center m-mt">
+              <Link href={"/"} className="btn">
+                목록으로
+              </Link>
+            </div>
           </div>
         </div>
       </main>

@@ -178,12 +178,10 @@
 }
 
 @media screen and (max-width: 800px) {
-  .eventView {
-    .btn_box {
-      .btn {
-        padding: 1.2rem 2rem;
-        font-size: 1rem;
-      }
+  .btn_box {
+    .btn {
+      padding: 1.2rem 2rem;
+      font-size: 1rem;
     }
   }
 }

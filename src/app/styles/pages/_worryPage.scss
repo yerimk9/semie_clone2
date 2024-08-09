@@ -1,0 +1,274 @@
+.labView {
+  padding-top: 4.625rem;
+
+  .view_title {
+    position: relative;
+    padding: 4.875rem 0;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .inner {
+      width: 100%;
+      max-width: 45rem;
+      margin: 0 auto;
+    }
+
+    .label {
+      display: inline-block;
+      margin-bottom: 0.625rem;
+      padding: 0.313rem 0.563rem;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 5px;
+      background-color: #0bab6d;
+    }
+
+    h3 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 3.8rem;
+    }
+
+    .date {
+      margin-top: 1.875rem;
+      color: #666;
+      font-size: 1rem;
+    }
+  }
+
+  .worry_view_wrap {
+    .view_title {
+      position: relative;
+      background-color: #eef8ff;
+      background-image: url("https://semie.cooking/assets/images/common/bg_pattern_sky.png");
+
+      .label {
+        background-color: #86caf3;
+      }
+    }
+  }
+
+  .worry_view_cont {
+    width: 100%;
+    max-width: 45rem;
+    margin: 0 auto;
+    padding: 3.75rem 0;
+    border-bottom: 1px solid #e5e5e5;
+
+    .worry_intro {
+      margin-bottom: 7.5rem;
+
+      p {
+        font-size: 1.125rem;
+        font-weight: 500;
+        line-height: 1.67;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+      }
+    }
+
+    .view_tag_wrap {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .comment_wrap {
+      margin-top: 1.875rem;
+      padding-top: 1.875rem;
+      border-top: 1px solid #e5e5e5;
+
+      .total {
+        margin-bottom: 1.875rem;
+        font-size: 1.375rem;
+        font-weight: 800;
+
+        span {
+          color: #15a775;
+        }
+      }
+
+      .cmt_login {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2.25rem;
+
+        .loginFirst {
+          width: 100%;
+          padding: 1.125rem 1.875rem;
+          color: #999;
+          font-size: 1rem;
+          border-radius: 8px;
+          border: solid 1px #e5e5e5;
+          background-color: #f9f9f9;
+
+          a {
+            color: #111;
+            text-decoration: underline;
+            text-underline-position: under;
+          }
+        }
+      }
+
+      .profile {
+        overflow: hidden;
+        flex-shrink: 0;
+        position: relative;
+        width: 2.625rem;
+        height: 2.625rem;
+        margin-right: 1.25rem;
+        border-radius: 100%;
+
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      .cmt_box {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 1.875rem;
+
+        .cmt {
+          position: relative;
+          width: 100%;
+
+          .name {
+            margin-bottom: 0.625rem;
+            font-size: 1rem;
+            font-weight: bold;
+
+            .date {
+              position: relative;
+              margin-left: 0.625rem;
+              padding-left: 0.625rem;
+              color: #999;
+              font-size: 0.875rem;
+
+              &::before {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 0.063rem;
+                height: 0.5rem;
+                background-color: #c4c4c4;
+                transform: translateY(-50%);
+                content: "";
+              }
+            }
+          }
+
+          .text {
+            margin-bottom: 0.625rem;
+            color: #666;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .labView {
+      padding-top: 7.5rem;
+    }
+  }
+
+  @media screen and (max-width: 560px) {
+    .labView {
+      padding-top: 5.625rem;
+
+      .view_title {
+        .inner {
+          max-width: 100%;
+          padding: 0 1.725rem;
+        }
+
+        h3 {
+          font-size: 1.9rem;
+          line-height: 2.3rem;
+        }
+
+        .date {
+          margin-top: 1.175rem;
+        }
+      }
+
+      .worry_view_wrap {
+        .view_title {
+          background-image: none;
+        }
+      }
+
+      .worry_view_cont {
+        .worry_intro {
+          p {
+            font-size: 2rem;
+          }
+
+          img {
+            margin-top: 1.875rem;
+            margin-bottom: 1.875rem;
+          }
+        }
+
+        .comment_wrap {
+          margin-top: 2.5rem;
+          padding-top: 2.5rem;
+
+          .total {
+            margin-bottom: 2.5rem;
+            font-size: 2.25rem;
+          }
+
+          .profile {
+            width: 3.5rem;
+            height: 3.5rem;
+            margin-right: 1.25rem;
+          }
+
+          .cmt_login {
+            .loginFirst {
+              padding: 1.625rem 2.625rem;
+              font-size: 1.875rem;
+            }
+          }
+
+          .cmt_box {
+            margin-top: 2.5rem;
+
+            .cmt {
+              .name {
+                margin-bottom: 1rem;
+                font-size: 1.875rem;
+
+                .date {
+                  font-size: 1.5rem;
+
+                  &::before {
+                    height: 1rem;
+                  }
+                }
+              }
+
+              .text {
+                margin-bottom: 1rem;
+                font-size: 1.875rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
