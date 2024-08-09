@@ -606,6 +606,9 @@ header .gnb .depth-1 > li:hover .depth-2 li a {
   font-weight: 500;
   color: #999;
 }
+header .gnb .depth-1 > li:hover .depth-2 li a:hover {
+  color: #15a775;
+}
 header .gnb .depth-1 > li::after {
   display: inline-block;
   width: 1.5rem;

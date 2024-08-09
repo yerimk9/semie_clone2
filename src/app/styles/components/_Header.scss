@@ -56,6 +56,10 @@ header {
                 font-size: 1rem;
                 font-weight: 500;
                 color: #999;
+
+                &:hover {
+                  color: #15a775;
+                }
               }
             }
           }
