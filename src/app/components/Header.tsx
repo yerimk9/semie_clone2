@@ -27,8 +27,8 @@ function Header() {
     setScrollTimeout,
     {
       elementSelector: "header",
-      hideOffset: -100, // 원하는 값으로 조정
-      showOffset: 0, // 원하는 값으로 조정
+      hideOffset: -100,
+      showOffset: 0,
       duration: 0.5,
       ease: "power2.out",
     }

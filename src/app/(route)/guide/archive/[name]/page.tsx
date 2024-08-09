@@ -6,7 +6,7 @@ import React from "react";
 import ic_kakao2 from "@/../public/images/ic_kakao2.png";
 import ic_url from "@/../public/images/ic_url.png";
 import GuideDetailItem from "@/app/components/GuideDetailItem";
-import { collection, doc, getDoc, getDocs, query } from "firebase/firestore";
+import { collection, getDocs, query } from "firebase/firestore";
 import { db } from "@/firebase";
 import parse from "html-react-parser";
 import { FoodGuideListItem } from "@/app/types";

@@ -1,5 +1,5 @@
 import React from "react";
-import { collection, doc, getDoc, getDocs, query } from "firebase/firestore";
+import { collection, getDocs, query } from "firebase/firestore";
 import { db } from "@/firebase";
 import Link from "next/link";
 import Image from "next/image";

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import ic_right from "../../../public/images/right.png";
 import il_samie_1 from "../../../public/svgs/il_samie_1-1.svg";
 import { FoodGuideModal } from "../types";

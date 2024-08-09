@@ -6,17 +6,13 @@ import ic_right from "@/../public/images/right.png";
 import Filter from "./Filter";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
-// import "swiper/css";
 import "swiper/css/navigation";
-// import required modules
 import { Navigation } from "swiper/modules";
 import GuideDetailItem from "./GuideDetailItem";
 import { FoodGuideList } from "../types";
 
 function Section2({ list }: FoodGuideList) {
   const selectedItem = list[4]?.items;
-  // console.log(list);
   return (
     <>
       <div className="title">

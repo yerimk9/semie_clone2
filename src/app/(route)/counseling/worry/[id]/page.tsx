@@ -1,7 +1,7 @@
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
 import React from "react";
-import { collection, doc, getDoc, getDocs, query } from "firebase/firestore";
+import { collection, getDocs, query } from "firebase/firestore";
 import { db } from "@/firebase";
 import Image from "next/image";
 import profileImg from "@/../public/images/profile.png";

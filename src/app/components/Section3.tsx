@@ -29,11 +29,7 @@ const pageClick = async (
 
   const pageSize = size;
 
-  const baseQuery = query(
-    collection(db, collectionName),
-    // orderBy("date"),
-    limit(pageSize)
-  );
+  const baseQuery = query(collection(db, collectionName), limit(pageSize));
 
   if (page === 1) {
     querySnapshot = await getDocs(baseQuery);

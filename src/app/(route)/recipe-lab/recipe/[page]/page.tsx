@@ -11,7 +11,6 @@ import {
   collection,
   getDocs,
   limit,
-  orderBy,
   query,
   startAfter,
 } from "firebase/firestore";
@@ -28,11 +27,7 @@ const pageClick = async (
 
   const pageSize = size;
 
-  const baseQuery = query(
-    collection(db, collectionName),
-    // orderBy("date"),
-    limit(pageSize)
-  );
+  const baseQuery = query(collection(db, collectionName), limit(pageSize));
 
   if (page === 1) {
     querySnapshot = await getDocs(baseQuery);
@@ -61,7 +56,6 @@ async function page({ params }: { params: { page: string } }) {
   try {
     const { dataList } = await pageClick(currentPage, "food_guide_list", 8);
     maxPageNumber = await getMaxPageNumber("food_guide_list", 8);
-    // foodItems = dataList[4]?.items;
     foodItems = (dataList[4] as any)?.items;
   } catch (e) {
     console.log(e);

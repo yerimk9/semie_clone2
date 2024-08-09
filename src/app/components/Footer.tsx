@@ -23,8 +23,8 @@ function Footer() {
     setScrollTimeout,
     {
       elementSelector: ".ft_top",
-      hideOffset: 100, // 원하는 값으로 조정
-      showOffset: 0, // 원하는 값으로 조정
+      hideOffset: 100,
+      showOffset: 0,
       duration: 0.5,
       ease: "power2.out",
     }
@@ -37,62 +37,6 @@ function Footer() {
       if (scrollTimeout) clearTimeout(scrollTimeout);
     };
   }, [handleScroll, scrollTimeout]);
-  /*   const handleScroll = useCallback(() => {
-    const topBtn = document.querySelector(".ft_top") as HTMLElement;
-    const currentScrollY = window.scrollY;
-
-    if (topBtn) {
-      if (currentScrollY > lastScrollY) {
-        // 스크롤이 아래로 내려가는 경우
-        gsap.to(topBtn, {
-          y: 100, // 버튼을 화면 아래로 숨김
-          duration: 0.5,
-          ease: "power2.out",
-        });
-
-        if (scrollTimeout) {
-          clearTimeout(scrollTimeout);
-        }
-
-        // 일정 시간 후에 버튼 다시 표시
-        setScrollTimeout(
-          setTimeout(() => {
-            gsap.to(topBtn, {
-              y: 0, // 버튼을 원래 위치로 복원
-              duration: 0.5,
-              ease: "power2.out",
-            });
-          }, 100) // 1.5초 후에 다시 나타나게 함
-        );
-      } else {
-        // 스크롤이 위로 올라가는 경우
-        gsap.to(topBtn, {
-          y: 0, // 버튼을 즉시 표시
-          duration: 0.5,
-          ease: "power2.out",
-        });
-
-        if (scrollTimeout) {
-          clearTimeout(scrollTimeout);
-        }
-      }
-
-      // 현재 스크롤 위치 업데이트
-      setLastScrollY(currentScrollY);
-    }
-  }, [lastScrollY, scrollTimeout]);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      if (scrollTimeout) {
-        clearTimeout(scrollTimeout);
-      }
-    };
-  }, [handleScroll, scrollTimeout]); */
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };

@@ -9,7 +9,6 @@ import {
   collection,
   getDocs,
   limit,
-  orderBy,
   query,
   startAfter,
 } from "firebase/firestore";

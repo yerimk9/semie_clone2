@@ -11,7 +11,6 @@ import parse from "html-react-parser";
 import { FoodGuideList } from "../types";
 
 function Section1({ list }: FoodGuideList) {
-  // function Section1() {
   const [slideIndex, setSlideIndex] = useState(1);
   const [isModal, setIsModal] = useState(false);
 
@@ -66,12 +65,11 @@ function Section1({ list }: FoodGuideList) {
           autoplay={{ delay: 2500, disableOnInteraction: false }}
           initialSlide={0} // 첫 번째 슬라이드로 시작
           onSlideChangeTransitionEnd={(swiperCore) => {
-            setSlideIndex(+swiperCore.realIndex + 1); // onSlideChange로 변경
+            setSlideIndex(+swiperCore.realIndex + 1);
           }}
           breakpoints={{
             800: {
               centeredSlides: true,
-              // slidesPerView: 1,
             },
           }}
           className="swiper mySwiper1"
@@ -79,7 +77,6 @@ function Section1({ list }: FoodGuideList) {
           {list.map((food, index) => (
             <SwiperSlide key={index} className="swiper-slide">
               <Link href={"/"}>
-                {/* <Image src={food["main_img"]} alt="img" fill /> */}
                 <Image src={food.items[0]?.main_img || ""} alt="img" fill />
 
                 <p className="swiper-title">{parse(food.title)}</p>
@@ -97,7 +94,7 @@ function Section1({ list }: FoodGuideList) {
           centeredSlides={true}
           loop={true}
           autoplay={{ delay: 2500, disableOnInteraction: false }}
-          initialSlide={1} // 첫 번째 슬라이드로 시작
+          initialSlide={1} // 두 번째 슬라이드로 시작
           speed={900}
           className="swiper mySwiper2"
         >
@@ -105,7 +102,6 @@ function Section1({ list }: FoodGuideList) {
             <SwiperSlide key={index} className="swiper-slide">
               <Link href={"/"}>
                 <div className="picture">
-                  {/* <Image src={food["main_img"]} alt="img" fill /> */}
                   <Image src={food.items[0]?.main_img || ""} alt="img" fill />
 
                   <p className="swiper-title">{parse(food.title)}</p>
@@ -117,7 +113,6 @@ function Section1({ list }: FoodGuideList) {
                 <ul className="thumb">
                   <li>
                     <Image
-                      // src={food["main_img"]}
                       src={food.items[0]?.main_img || ""}
                       alt="img"
                       width={125}
@@ -126,7 +121,6 @@ function Section1({ list }: FoodGuideList) {
                   </li>
                   <li>
                     <Image
-                      // src={food["main_img"]}
                       src={food.items[0]?.main_img || ""}
                       alt="img"
                       width={125}
@@ -135,7 +129,6 @@ function Section1({ list }: FoodGuideList) {
                   </li>
                   <li>
                     <Image
-                      // src={food["main_img"]}
                       src={food.items[0]?.main_img || ""}
                       alt="img"
                       width={125}
@@ -155,13 +148,12 @@ function Section1({ list }: FoodGuideList) {
           loop={true}
           speed={900}
           autoplay={{ delay: 2500, disableOnInteraction: false }}
-          initialSlide={2} // 첫 번째 슬라이드로 시작
+          initialSlide={2} // 세 번째 슬라이드로 시작
           className="swiper mySwiper3"
         >
           {list.map((food, index) => (
             <SwiperSlide key={index} className="swiper-slide">
               <Link href={"/"}>
-                {/* <Image src={food["main_img"]} alt="img" fill /> */}
                 <Image src={food.items[0]?.main_img || ""} alt="img" fill />
 
                 <p className="swiper-title">{parse(food.title)}</p>

@@ -23,17 +23,13 @@ async function page({ params }: { params: { name: string } }) {
       foodItems.push(data);
     });
 
-    // foodItems 배열을 순회
     foodItems.forEach((item) => {
-      // 각 foodItem의 items 배열을 순회
       item.items.forEach((subItem: FoodGuideItem) => {
         if (subItem.name == decodeURI(params.name)) {
           selectItem = subItem;
         }
       });
     });
-
-    console.log(selectItem);
   } catch (e) {
     console.error(e);
     return null;

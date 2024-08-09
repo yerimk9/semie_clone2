@@ -3,14 +3,13 @@ import Footer from "./components/Footer";
 import Section1 from "./components/Section1";
 import { collection, getDocs, query } from "firebase/firestore";
 import { db } from "@/firebase";
-import { FoodGuide } from "./types";
+import { FoodGuideListItem } from "./types";
 import Section4 from "./components/Section4";
 import Section3 from "./components/Section3";
 import Section2 from "./components/Section2";
-import GuideDetailItem from "./components/GuideDetailItem";
 
 export default async function Home() {
-  let foodItems: FoodGuide[] = [];
+  let foodItems: FoodGuideListItem[] = [];
   try {
     // Firestore에서 데이터 가져오기
     const querySnapshot = await getDocs(
@@ -18,7 +17,7 @@ export default async function Home() {
     );
 
     querySnapshot.forEach((doc) => {
-      const data = doc.data() as FoodGuide;
+      const data = doc.data() as FoodGuideListItem;
       foodItems.push(data);
     });
   } catch (e) {
