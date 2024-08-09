@@ -49,6 +49,7 @@ async function page({ params }: { params: { page: string } }) {
             <Pagination
               currentPage={currentPage}
               maxPageNumber={maxPageNumber}
+              path={"/wow/"}
             />
           </div>
         </div>

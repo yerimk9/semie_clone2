@@ -46,7 +46,11 @@ export default async function page({ params }: { params: { page: string } }) {
             ))}
           </ul>
 
-          <Pagination currentPage={currentPage} maxPageNumber={maxPageNumber} />
+          <Pagination
+            currentPage={currentPage}
+            maxPageNumber={maxPageNumber}
+            path={"/guide/list/"}
+          />
         </div>
       </main>
 

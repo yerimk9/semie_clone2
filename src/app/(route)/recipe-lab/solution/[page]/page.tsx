@@ -62,6 +62,7 @@ async function page({ params }: { params: { page: string } }) {
             <Pagination
               currentPage={currentPage}
               maxPageNumber={maxPageNumber}
+              path={"/recipe-lab/solution/"}
             />
           </div>
         </div>

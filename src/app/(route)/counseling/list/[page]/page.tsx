@@ -115,6 +115,7 @@ async function page({ params }: { params: { page: string } }) {
             <Pagination
               currentPage={currentPage}
               maxPageNumber={maxPageNumber}
+              path={"/counseling/list/"}
             />
           </div>
         </div>
