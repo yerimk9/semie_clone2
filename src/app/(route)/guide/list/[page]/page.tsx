@@ -2,6 +2,7 @@ import Filter from "@/app/components/Filter";
 import FoodGuideItem from "@/app/components/FoodGuideItem";
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
+import Pagination from "@/app/components/Pagination";
 import { FoodGuideListItem } from "@/app/types";
 import getMaxPageNumber from "@/app/utils/getMaxPageNumber";
 import { db } from "@/firebase";
@@ -82,29 +83,7 @@ export default async function page({ params }: { params: { page: string } }) {
             ))}
           </ul>
 
-          <div className="pagination">
-            {currentPage > 1 && (
-              <Link href={`/guide/list/${currentPage - 1}`} className="prev">
-                <i className="icon_prev">이전페이지</i>
-              </Link>
-            )}
-            <span className="page_p">
-              {Array.from({ length: maxPageNumber }, (_, i) => (
-                <Link
-                  key={i + 1}
-                  href={`/guide/list/${i + 1}`}
-                  className={i + 1 === currentPage ? "act" : ""}
-                >
-                  {i + 1}
-                </Link>
-              ))}
-            </span>
-            {currentPage < maxPageNumber && (
-              <Link href={`/guide/list/${currentPage + 1}`} className="next">
-                <i className="icon_next">다음페이지</i>
-              </Link>
-            )}
-          </div>
+          <Pagination currentPage={currentPage} maxPageNumber={maxPageNumber} />
         </div>
       </main>
 

@@ -16,6 +16,7 @@ import {
 } from "firebase/firestore";
 import getMaxPageNumber from "@/app/utils/getMaxPageNumber";
 import { FoodGuideItem } from "@/app/types";
+import Pagination from "@/app/components/Pagination";
 
 const pageClick = async (
   page: number,
@@ -121,35 +122,10 @@ async function page({ params }: { params: { page: string } }) {
               </ul>
             </div>
 
-            <div className="pagination">
-              {currentPage > 1 && (
-                <Link
-                  href={`/recipe-lab/recipe/${currentPage - 1}`}
-                  className="prev"
-                >
-                  <i className="icon_prev">이전페이지</i>
-                </Link>
-              )}
-              <span className="page_p">
-                {Array.from({ length: maxPageNumber }, (_, i) => (
-                  <Link
-                    key={i + 1}
-                    href={`/recipe-lab/recipe/${i + 1}`}
-                    className={i + 1 === currentPage ? "act" : ""}
-                  >
-                    {i + 1}
-                  </Link>
-                ))}
-              </span>
-              {currentPage < maxPageNumber && (
-                <Link
-                  href={`/recipe-lab/recipe/${currentPage + 1}`}
-                  className="next"
-                >
-                  <i className="icon_next">다음페이지</i>
-                </Link>
-              )}
-            </div>
+            <Pagination
+              currentPage={currentPage}
+              maxPageNumber={maxPageNumber}
+            />
           </div>
         </div>
       </main>
