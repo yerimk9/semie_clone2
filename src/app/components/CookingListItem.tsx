@@ -6,7 +6,7 @@ import { CookingListItemProps } from "../types";
 function CookingListItem({ item }: CookingListItemProps) {
   return (
     <>
-      <Link href={"/"}>
+      <Link href={`/cooking/${item?.id}`}>
         <div className="img">
           <Image src={item?.imgUrl} alt="" width={2268} height={3080} />
         </div>

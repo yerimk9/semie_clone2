@@ -1,5 +1,5 @@
 .labView {
-  padding-top: 4.625rem;
+  padding-top: 5.625rem;
 
   .view_title {
     position: relative;
@@ -45,6 +45,21 @@
 
       .label {
         background-color: #86caf3;
+      }
+    }
+
+    .btn_box {
+      margin-bottom: 5rem;
+    }
+  }
+
+  .cooking_view_wrap {
+    .view_title {
+      background-color: #fff3f3;
+      background-image: url("https://semie.cooking/assets/images/common/bg_pattern_pink.png");
+
+      .label {
+        background-color: #f999a1;
       }
     }
 
@@ -186,6 +201,7 @@
     }
   }
 }
+
 @media screen and (max-width: 800px) {
   .labView {
     padding-top: 7.5rem;
@@ -194,7 +210,7 @@
 
 @media screen and (max-width: 560px) {
   .labView {
-    padding-top: 5.625rem;
+    padding-top: 4.625rem;
 
     .view_title {
       .inner {
@@ -218,8 +234,14 @@
       }
     }
 
+    .cooking_view_wrap {
+      .view_title {
+        background-image: none;
+      }
+    }
+
     .worry_view_cont {
-      padding: 3.75rem 5rem;
+      padding: 3.75rem 2rem;
       .worry_intro {
         img {
           margin-top: 1.875rem;
