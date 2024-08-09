@@ -16,13 +16,14 @@ import {
 } from "firebase/firestore";
 import { db } from "@/firebase";
 import getMaxPageNumber from "@/app/utils/getMaxPageNumber";
+import { CounselingListItemProps } from "@/app/types";
 
 const pageClick = async (
   page: number,
   collectionName: string,
   size: number
-): Promise<{ dataList: CounselingItemsProps[] }> => {
-  let dataList: CounselingItemsProps[] = [];
+): Promise<{ dataList: CounselingListItemProps[] }> => {
+  let dataList: CounselingListItemProps[] = [];
   let querySnapshot;
 
   const pageSize = size;
@@ -43,7 +44,7 @@ const pageClick = async (
   }
 
   querySnapshot.forEach((doc) => {
-    const data = doc.data() as CounselingItemsProps;
+    const data = doc.data() as CounselingListItemProps;
     dataList.push(data);
   });
 
@@ -53,7 +54,7 @@ const pageClick = async (
 };
 
 async function page({ params }: { params: { page: string } }) {
-  let counselingItems: CounselingItemsProps[] = [];
+  let counselingItems: CounselingListItemProps[] = [];
   let currentPage = parseInt(params.page, 10);
   let maxPageNumber = 1;
   try {

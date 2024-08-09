@@ -9,17 +9,18 @@ import GuideDetailItem from "@/app/components/GuideDetailItem";
 import { collection, doc, getDoc, getDocs, query } from "firebase/firestore";
 import { db } from "@/firebase";
 import parse from "html-react-parser";
+import { FoodGuideListItem } from "@/app/types";
 
-async function page({ params }: { params: number }) {
-  let selectItem: FoodGuide | undefined;
+async function page({ params }: { params: { name: number } }) {
+  let selectItem: FoodGuideListItem | undefined;
   try {
     const querySnapshot = await getDocs(
       query(collection(db, "food_guide_list"))
     );
-    const foodItems: FoodGuide[] = [];
+    const foodItems: FoodGuideListItem[] = [];
 
     querySnapshot.forEach((doc) => {
-      const data = doc.data() as FoodGuide;
+      const data = doc.data() as FoodGuideListItem;
       foodItems.push(data);
     });
 

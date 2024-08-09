@@ -49,7 +49,7 @@ export interface CookingList {
   item: CookingListItemProps;
 }
 
-export interface CounselingListItem {
+export interface CounselingListItemProps {
   date: string;
   hashTag?: string[];
   id: string | number;

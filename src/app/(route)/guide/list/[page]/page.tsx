@@ -2,6 +2,7 @@ import Filter from "@/app/components/Filter";
 import FoodGuideItem from "@/app/components/FoodGuideItem";
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
+import { FoodGuideListItem } from "@/app/types";
 import getMaxPageNumber from "@/app/utils/getMaxPageNumber";
 import { db } from "@/firebase";
 import {
@@ -19,8 +20,8 @@ const pageClick = async (
   page: number,
   collectionName: string,
   size: number
-): Promise<{ wowList: FoodGuide[] }> => {
-  let wowList: FoodGuide[] = [];
+): Promise<{ wowList: FoodGuideListItem[] }> => {
+  let wowList: FoodGuideListItem[] = [];
   let querySnapshot;
 
   const pageSize = size;
@@ -41,7 +42,7 @@ const pageClick = async (
   }
 
   querySnapshot.forEach((doc) => {
-    const data = doc.data() as FoodGuide;
+    const data = doc.data() as FoodGuideListItem;
     wowList.push(data);
   });
 
@@ -51,7 +52,7 @@ const pageClick = async (
 };
 
 export default async function page({ params }: { params: { page: string } }) {
-  let foodItems: FoodGuide[] = [];
+  let foodItems: FoodGuideListItem[] = [];
   let currentPage = parseInt(params.page, 10);
   let maxPageNumber = 1;
 
@@ -81,22 +82,6 @@ export default async function page({ params }: { params: { page: string } }) {
               <FoodGuideItem key={idx} item={item} />
             ))}
           </ul>
-          {/*   <div className="pagination">
-            <Link href={"/"} className="prev">
-              <i className="icon_prev">이전페이지</i>
-            </Link>
-            <span className="page_p">
-              <Link href={"/"}>1</Link>
-              <Link href={"/"}>2</Link>
-              <Link href={"/"} className="act">
-                3
-              </Link>
-              <Link href={"/"}>4</Link>
-            </span>
-            <Link href={"/"} className="next">
-              <i className="icon_next">다음페이지</i>
-            </Link>
-          </div> */}
 
           <div className="pagination">
             {currentPage > 1 && (

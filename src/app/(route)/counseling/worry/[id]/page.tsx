@@ -4,22 +4,21 @@ import React from "react";
 import { collection, doc, getDoc, getDocs, query } from "firebase/firestore";
 import { db } from "@/firebase";
 import Image from "next/image";
-import ic_kakao2 from "@/../public/images/ic_kakao2.png";
-import ic_url from "@/../public/images/ic_url.png";
 import profileImg from "@/../public/images/profile.png";
 import Link from "next/link";
+import { CounselingListItemProps } from "@/app/types";
 
 async function page({ params }: { params: { id: string } }) {
-  let selectItem: CounselingItemsProps | undefined;
+  let selectItem: CounselingListItemProps | undefined;
 
   try {
     const querySnapshot = await getDocs(
       query(collection(db, "counseling_list"))
     );
-    const foodItems: CounselingItemsProps[] = [];
+    const foodItems: CounselingListItemProps[] = [];
 
     querySnapshot.forEach((doc) => {
-      const data = doc.data() as CounselingItemsProps;
+      const data = doc.data() as CounselingListItemProps;
       foodItems.push(data);
     });
 

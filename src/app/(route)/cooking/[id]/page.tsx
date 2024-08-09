@@ -6,16 +6,17 @@ import Image from "next/image";
 import profileImg from "@/../public/images/profile.png";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
+import { CookingListItemProps } from "@/app/types";
 
 async function page({ params }: { params: { id: string } }) {
-  let selectItem: CookingListItemsProps | undefined;
+  let selectItem: CookingListItemProps | undefined;
 
   try {
     const querySnapshot = await getDocs(query(collection(db, "cooking_list")));
-    const foodItems: CookingListItemsProps[] = [];
+    const foodItems: CookingListItemProps[] = [];
 
     querySnapshot.forEach((doc) => {
-      const data = doc.data() as CookingListItemsProps;
+      const data = doc.data() as CookingListItemProps;
       foodItems.push(data);
     });
 
