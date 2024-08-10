@@ -44,8 +44,6 @@ main {
   }
 }
 
-// 이 위에는 정리 완료 !!
-
 .swiper-title {
   position: absolute;
 
@@ -132,8 +130,18 @@ main {
   }
 }
 
+// 이 위에는 정리 완료 !!
+
 .block {
   display: block !important;
+}
+
+.mb_hide {
+  display: block;
+}
+
+.mb_show {
+  display: none;
 }
 
 .myfood {
@@ -258,14 +266,6 @@ img {
       }
     }
   }
-}
-
-.mb_hide {
-  display: block;
-}
-
-.mb_show {
-  display: none;
 }
 
 @media screen and (max-width: 800px) {

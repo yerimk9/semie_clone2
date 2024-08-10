@@ -122,6 +122,14 @@ main {
   display: block !important;
 }
 
+.mb_hide {
+  display: block;
+}
+
+.mb_show {
+  display: none;
+}
+
 .myfood {
   position: relative;
   width: 100%;
@@ -227,14 +235,6 @@ img.mb-show {
   content: "";
 }
 .filter ul li::after {
-  display: none;
-}
-
-.mb_hide {
-  display: block;
-}
-
-.mb_show {
   display: none;
 }
 
@@ -1278,16 +1278,6 @@ footer p {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  /* 
-  .btn_arrow_lg {
-    padding: 1rem 1.5rem;
-    font-size: 1.125rem;
-
-    img {
-      width: 1rem;
-      margin-left: 0.5rem;
-    }
-  } */
 }
 .guideWrap .guide_modal .guide_modal_head .guide_modal_head_title h3 {
   display: inline-flex;
@@ -2617,17 +2607,6 @@ footer p {
   .section3 .swiper.mySwiper2 .swiper-slide .bottom_text {
     width: 70% !important;
   }
-}
-.section4 {
-  /*   .btn_arrow_lg {
-    padding: 1rem 1.5rem;
-    font-size: 1.125rem;
-
-    img {
-      width: 1rem;
-      margin-left: 0.5rem;
-    }
-  } */
 }
 .section4 .title {
   display: flex;
