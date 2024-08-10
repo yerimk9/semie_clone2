@@ -29,6 +29,23 @@ main {
   box-sizing: border-box;
 }
 
+.subTitle {
+  margin-bottom: 1.875rem;
+  h3 {
+    display: flex;
+    align-items: center;
+    font-size: 3.75rem;
+    font-weight: 800;
+
+    img {
+      height: 5.875rem;
+      margin-right: 0.625rem;
+    }
+  }
+}
+
+// 이 위에는 정리 완료 !!
+
 .swiper-title {
   position: absolute;
 
@@ -177,21 +194,6 @@ main {
   }
 }
 
-.subTitle {
-  margin-bottom: 1.875rem;
-  h3 {
-    display: flex;
-    align-items: center;
-    font-size: 3.75rem;
-    font-weight: 800;
-
-    img {
-      height: 5.875rem;
-      margin-right: 0.625rem;
-    }
-  }
-}
-
 img {
   &.mb-show {
     display: none;
@@ -284,6 +286,8 @@ img {
     padding: 4.5rem 1.875rem;
   }
 
+  // 이 위에는 완료
+
   img {
     &.pc-show {
       display: none;
@@ -319,13 +323,8 @@ img {
 }
 
 @media screen and (max-width: 560px) {
-  .btn_arrow_lg {
-    text-indent: -9999px;
-    border: none !important;
-
-    img {
-      height: 1.6rem;
-    }
+  .section2 {
+    padding: 2.25rem 0;
   }
 
   .subTitle {
@@ -343,6 +342,17 @@ img {
       img {
         display: none;
       }
+    }
+  }
+
+  // 이 위에는 완료
+
+  .btn_arrow_lg {
+    text-indent: -9999px;
+    border: none !important;
+
+    img {
+      height: 1.6rem;
     }
   }
 
@@ -420,10 +430,6 @@ img {
         }
       }
     }
-  }
-
-  .section2 {
-    padding: 2.25rem 0;
   }
 
   .mb_hide {
