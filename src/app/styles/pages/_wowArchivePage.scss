@@ -239,23 +239,6 @@
         }
       }
     }
-
-    .subTitle {
-      position: fixed;
-      left: 50%;
-      width: auto;
-      margin-bottom: 0;
-      transform: translateX(-50%);
-      z-index: 1001;
-
-      h3 {
-        font-size: 1.875rem;
-
-        img {
-          display: none;
-        }
-      }
-    }
   }
 
   .btn {

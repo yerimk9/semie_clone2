@@ -1,8 +1,4 @@
 @charset "UTF-8";
-.block {
-  display: block !important;
-}
-
 main {
   max-width: 1920px;
   margin: 0 auto;
@@ -106,6 +102,10 @@ main {
 .btn_arrow_lg img {
   width: 1rem;
   margin-left: 0.5rem;
+}
+
+.block {
+  display: block !important;
 }
 
 .myfood {
@@ -294,7 +294,10 @@ img.mb-show {
     z-index: 1001;
   }
   .subTitle h3 {
-    font-size: 1.175rem !important;
+    font-size: 1.175rem;
+  }
+  .subTitle h3 img {
+    display: none;
   }
   .filter {
     display: flex;
@@ -4278,20 +4281,6 @@ footer p {
     width: 100%;
     margin-bottom: 1.25rem;
     font-size: 1.3rem;
-  }
-  .eventView .subTitle {
-    position: fixed;
-    left: 50%;
-    width: auto;
-    margin-bottom: 0;
-    transform: translateX(-50%);
-    z-index: 1001;
-  }
-  .eventView .subTitle h3 {
-    font-size: 1.875rem;
-  }
-  .eventView .subTitle h3 img {
-    display: none;
   }
   .btn {
     padding: 1.938rem 4.063rem;
