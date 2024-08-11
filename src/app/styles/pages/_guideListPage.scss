@@ -11,16 +11,6 @@
     width: calc(100% + 2.125rem);
     margin-left: -1.0625rem;
   }
-
-  .filter {
-    > ul {
-      li:last-child {
-        &::after {
-          display: none;
-        }
-      }
-    }
-  }
 }
 
 .pagination {

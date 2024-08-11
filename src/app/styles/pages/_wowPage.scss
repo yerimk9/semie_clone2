@@ -8,24 +8,6 @@
   .eventList_wrap {
     margin-top: 1.875rem;
 
-    .filter {
-      ul {
-        li {
-          &:not(.on)::before {
-            width: 0.25rem;
-            height: 0.25rem;
-            margin: 0 0.5rem;
-            border-radius: 100%;
-            background-color: #c4c4c4;
-            content: "";
-          }
-          &::after {
-            display: none;
-          }
-        }
-      }
-    }
-
     .event_list {
       display: flex;
       flex-wrap: wrap;
@@ -46,21 +28,6 @@
 
         img {
           display: none;
-        }
-      }
-    }
-
-    .eventList_wrap {
-      .filter {
-        ul {
-          li {
-            &::before {
-              display: none;
-            }
-            &::after {
-              display: none;
-            }
-          }
         }
       }
     }

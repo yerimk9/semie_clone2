@@ -192,18 +192,18 @@ img.mb-show {
 .filter p {
   display: none;
 }
-.filter ul {
+.filter > ul {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
-.filter ul li {
+.filter > ul li {
   display: inline-flex;
   align-items: center;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
-.filter ul li::after {
+.filter > ul li::after {
   width: 0.25rem;
   height: 0.25rem;
   margin: 0.5rem;
@@ -211,7 +211,7 @@ img.mb-show {
   background-color: #c4c4c4;
   content: "";
 }
-.filter ul li.on button {
+.filter > ul li.on button {
   padding-left: 1.2rem;
   color: #111;
   font-weight: 500;
@@ -220,13 +220,13 @@ img.mb-show {
   background-position: 0 50%;
   background-size: auto 100%;
 }
-.filter ul li.on::after {
+.filter > ul li.on::after {
   display: none;
 }
-.filter ul li button {
+.filter > ul li button {
   color: #c4c4c4;
 }
-.filter ul li:not(.on)::before {
+.filter > ul li:not(.on)::before {
   width: 0.25rem;
   height: 0.25rem;
   margin: 0 0.5rem;
@@ -234,7 +234,10 @@ img.mb-show {
   background-color: #c4c4c4;
   content: "";
 }
-.filter ul li::after {
+.filter > ul li::after {
+  display: none;
+}
+.filter > ul li:last-child::after {
   display: none;
 }
 
@@ -354,15 +357,22 @@ img.mb-show {
     height: 4.063rem;
     padding: 0 1.5rem;
   }
+  .filter ul li::before {
+    display: none;
+  }
+  .filter ul li::after {
+    display: none;
+  }
   .filter ul li.on {
     background-color: #f3f3f3;
+    background-image: url(../../../public/svgs/check.svg);
+    background-repeat: no-repeat;
+    background-position: 90% 0%;
+    background-size: 10% 100%;
   }
-  .filter ul li.on a {
-    display: block;
-    width: 100%;
+  .filter ul li.on button {
     padding-left: 0;
-    background-size: 1rem 1rem;
-    background-position: 100% 50%;
+    background-image: none;
   }
   .mb_hide {
     display: none;
@@ -3004,9 +3014,6 @@ footer p {
   width: calc(100% + 2.125rem);
   margin-left: -1.0625rem;
 }
-.guideList .filter > ul li:last-child::after {
-  display: none;
-}
 
 .pagination {
   display: flex;
@@ -3442,17 +3449,6 @@ footer p {
 .eventList .eventList_wrap {
   margin-top: 1.875rem;
 }
-.eventList .eventList_wrap .filter ul li:not(.on)::before {
-  width: 0.25rem;
-  height: 0.25rem;
-  margin: 0 0.5rem;
-  border-radius: 100%;
-  background-color: #c4c4c4;
-  content: "";
-}
-.eventList .eventList_wrap .filter ul li::after {
-  display: none;
-}
 .eventList .eventList_wrap .event_list {
   display: flex;
   flex-wrap: wrap;
@@ -3468,12 +3464,6 @@ footer p {
     content: "WOW";
   }
   .eventList .subTitle h3 img {
-    display: none;
-  }
-  .eventList .eventList_wrap .filter ul li::before {
-    display: none;
-  }
-  .eventList .eventList_wrap .filter ul li::after {
     display: none;
   }
 }
@@ -3553,9 +3543,6 @@ footer p {
 }
 .labList .detail_wrap .detail_con .middle_bn {
   margin-bottom: 5rem;
-}
-.labList .filter > ul li:last-child::after {
-  display: none;
 }
 
 @media screen and (max-width: 800px) {

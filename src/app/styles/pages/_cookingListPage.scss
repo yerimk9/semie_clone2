@@ -91,16 +91,6 @@
       }
     }
   }
-
-  .filter {
-    > ul {
-      li:last-child {
-        &::after {
-          display: none;
-        }
-      }
-    }
-  }
 }
 
 @media screen and (max-width: 800px) {

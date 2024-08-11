@@ -130,8 +130,6 @@ main {
   }
 }
 
-// 이 위에는 정리 완료 !!
-
 .block {
   display: block !important;
 }
@@ -143,6 +141,8 @@ main {
 .mb_show {
   display: none;
 }
+
+// 이 위에는 정리 완료 !!
 
 .myfood {
   position: relative;
@@ -215,7 +215,7 @@ img {
     display: none;
   }
 
-  ul {
+  > ul {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -263,6 +263,12 @@ img {
       }
       &::after {
         display: none;
+      }
+
+      &:last-child {
+        &::after {
+          display: none;
+        }
       }
     }
   }
@@ -384,7 +390,7 @@ img {
 
       &:hover {
         ~ ul {
-          height: 9.525rem;
+          height: 9.525rem; // 12.525rem
           padding: 1rem;
           border: solid 1px #d4d4d4;
 
@@ -417,15 +423,23 @@ img {
         height: 4.063rem;
         padding: 0 1.5rem;
 
+        &::before {
+          display: none;
+        }
+        &::after {
+          display: none;
+        }
+
         &.on {
           background-color: #f3f3f3;
+          background-image: url(../../../public/svgs/check.svg);
+          background-repeat: no-repeat;
+          background-position: 90% 0%;
+          background-size: 10% 100%;
 
-          a {
-            display: block;
-            width: 100%;
+          button {
             padding-left: 0;
-            background-size: 1rem 1rem;
-            background-position: 100% 50%;
+            background-image: none;
           }
         }
       }
