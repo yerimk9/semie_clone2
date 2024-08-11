@@ -1350,8 +1350,8 @@ footer p {
 }
 .guideWrap .guide_modal .guide_modal_body .guide_modal_cont ul li .img .morePic {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -1422,6 +1422,10 @@ footer p {
 .guideList > ul > li .thumb {
   display: flex;
   justify-content: space-between;
+  align-items: stretch;
+  flex-direction: row;
+  /* display: flex;
+  justify-content: space-between; */
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1448,8 +1452,8 @@ footer p {
 }
 .guideList > ul > li .thumb li .more_detail {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -2009,8 +2013,8 @@ footer p {
 }
 .section1 .swiper-container .mySwiper2 .swiper-slide .thumb li .more_detail {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -2225,8 +2229,8 @@ footer p {
 }
 .section2 .title {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   margin-bottom: 3.375rem;
 }
@@ -2491,6 +2495,7 @@ footer p {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  flex-direction: row;
 }
 .section3 .swiper-container-box .swiper .swiper-slide a .img {
   display: flex;
@@ -2781,8 +2786,10 @@ footer p {
 }
 .cardList > li {
   overflow: hidden;
+  /* display: flex;
+  flex-flow: column; */
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   position: relative;
   width: calc(25% - 2rem);
   min-height: 30.625rem;
@@ -3018,10 +3025,10 @@ footer p {
 
 .pagination {
   display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 .pagination a {
   font-size: 1rem;
@@ -3066,9 +3073,10 @@ footer p {
 }
 .pagination .page_p {
   display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
+  justify-content: start;
   align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 .pagination .page_p a {
   text-indent: 0;
@@ -3247,8 +3255,8 @@ footer p {
 }
 .guideDetail .detail_wrap .detail_con .detail_title .title_tag {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 0.563rem;
   margin-top: 2.938rem;
@@ -3509,8 +3517,8 @@ footer p {
 }
 .labList .tab ul li.on a {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   color: #111;
   background-color: #eff9ef;
 }
@@ -4071,8 +4079,8 @@ footer p {
 }
 .eventView .title .label_list {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   margin-bottom: 1.063rem;
 }
 .eventView .title .label_list .label {
@@ -4134,8 +4142,9 @@ footer p {
 }
 .eventView .event_wrap .event_info_wrap .event_info .event_info_item {
   display: flex;
-  align-items: flex-start;
   justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
   margin-top: 1.2rem;
 }
 .eventView .event_wrap .event_info_wrap .event_info .event_info_item .event_info_dt {

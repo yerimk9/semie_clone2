@@ -24,9 +24,7 @@
           }
 
           .foot {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            @include flexSpaceBetween;
             padding: 1.125rem 1.5rem;
 
             .cmtNum {
@@ -60,7 +58,4 @@
       }
     }
   }
-}
-
-@media screen and (max-width: 800px) {
 }

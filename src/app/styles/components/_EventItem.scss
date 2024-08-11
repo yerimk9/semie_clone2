@@ -19,8 +19,7 @@
     }
 
     .date {
-      display: flex;
-      align-items: center;
+      @include flexitems;
       margin-top: 0.75rem;
       color: $primary-color3;
       font-size: 1rem;

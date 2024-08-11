@@ -14,11 +14,8 @@
 }
 
 .pagination {
-  display: flex;
+  @include flex(center, center, row);
   flex-wrap: nowrap;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
 
   a {
     font-size: 1rem;
@@ -68,10 +65,8 @@
   }
 
   .page_p {
-    display: flex;
+    @include flex(start, center, row);
     flex-wrap: nowrap;
-    flex-direction: row;
-    align-items: center;
 
     a {
       text-indent: 0;

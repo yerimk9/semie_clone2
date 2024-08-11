@@ -10,9 +10,7 @@
     text-align: center;
 
     .label_list {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flexCenter;
       margin-bottom: 1.063rem;
 
       .label {
@@ -86,9 +84,7 @@
         border-bottom: 1px solid $bg-color3;
 
         .event_info_item {
-          display: flex;
-          align-items: flex-start;
-          justify-content: flex-start;
+          @include flex(flex-start, flex-start, row);
           margin-top: 1.2rem;
 
           .event_info_dt {

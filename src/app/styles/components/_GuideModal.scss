@@ -26,9 +26,7 @@
       background-color: $bg-color8;
 
       .guide_modal_head_title {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flexSpaceBetween;
         width: 100%;
 
         h3 {
@@ -100,9 +98,7 @@
               }
 
               .morePic {
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @include flexCenter;
                 position: absolute;
                 bottom: 0;
                 right: 0;

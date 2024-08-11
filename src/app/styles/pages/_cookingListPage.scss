@@ -44,9 +44,7 @@
 
         &.on {
           a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flexCenter;
             color: #111;
             background-color: $bg-color5;
 

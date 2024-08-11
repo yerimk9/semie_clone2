@@ -1,8 +1,6 @@
 .section2 {
   .title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexSpaceBetween;
     width: 100%;
     margin-bottom: 3.375rem;
 

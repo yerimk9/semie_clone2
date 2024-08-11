@@ -290,8 +290,7 @@ header {
         background-position: calc(100% - 1.9rem) center;
 
         a {
-          display: flex;
-          align-items: center;
+          @include flexitems;
           position: relative;
           width: 100%;
           padding: 1.713rem 1.9rem;
@@ -444,8 +443,7 @@ header {
       }
 
       .searchWrap {
-        display: flex;
-        align-items: center;
+        @include flexitems;
         width: calc(100% - 6rem);
         height: 3rem;
         border-radius: 100px;

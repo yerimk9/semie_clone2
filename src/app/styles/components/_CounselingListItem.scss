@@ -1,8 +1,9 @@
 .cardList {
   > li {
     overflow: hidden;
-    display: flex;
-    flex-flow: column;
+    /* display: flex;
+    flex-flow: column; */
+    @include flexCol;
     position: relative;
     width: calc(25% - 2rem);
     min-height: 30.625rem;
@@ -12,8 +13,7 @@
     border-radius: 10px;
 
     > a {
-      display: flex;
-      flex-direction: column;
+      @include flexCol;
       height: 100%;
 
       position: relative;
@@ -44,8 +44,7 @@
     }
 
     .info {
-      display: flex;
-      align-items: center;
+      @include flexitems;
       margin-top: 1.125rem;
       margin-bottom: 1rem;
       padding: 0 1.5rem;
