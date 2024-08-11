@@ -142,72 +142,6 @@ main {
   display: none;
 }
 
-// 이 위에는 정리 완료 !!
-
-.myfood {
-  position: relative;
-  width: 100%;
-  margin-bottom: 1.8rem;
-
-  > img {
-    position: relative;
-    height: 8.375em;
-    margin-left: 3.125rem;
-    vertical-align: middle;
-    z-index: 10;
-  }
-
-  .myfoodBtnWrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 1.5rem 3.375rem 1.5rem 15.875rem;
-    color: #fff;
-    border-radius: 2.625rem;
-    background-color: #fbb9bf;
-
-    p {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    a {
-      display: flex;
-      align-items: center;
-      position: relative;
-      padding-left: 2.625rem;
-      font-size: 1.125rem;
-      font-weight: bold;
-      color: inherit;
-
-      img {
-        margin-left: 5px;
-      }
-
-      &::before {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 1px;
-        height: 1.25rem;
-        margin-top: -0.625rem;
-        background-color: rgba(255, 255, 255, 0.6);
-        content: "";
-      }
-    }
-  }
-}
-
-img {
-  &.mb-show {
-    display: none;
-  }
-}
-
 .filter {
   margin-bottom: 1.25rem;
 
@@ -271,6 +205,73 @@ img {
         }
       }
     }
+  }
+}
+
+// 이 위에는 정리 완료 !!
+
+.myfood {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.8rem;
+
+  > img {
+    position: relative;
+    height: 8.375em;
+    margin-left: 3.125rem;
+    vertical-align: middle;
+    z-index: 10;
+  }
+
+  .myfoodBtnWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 3.375rem 1.5rem 15.875rem;
+    color: #fff;
+    border-radius: 2.625rem;
+    background-color: #fbb9bf;
+
+    p {
+      font-size: 1.5rem;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-left: 2.625rem;
+      font-size: 1.125rem;
+      font-weight: bold;
+      color: inherit;
+
+      img {
+        margin-left: 5px;
+      }
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 1px;
+        height: 1.25rem;
+        margin-top: -0.625rem;
+        background-color: rgba(255, 255, 255, 0.6);
+        content: "";
+      }
+    }
+  }
+}
+
+img {
+  &.mb-show {
+    display: none;
   }
 }
 
@@ -350,8 +351,6 @@ img {
       }
     }
   }
-
-  // 이 위에는 완료
 
   .btn_arrow_lg {
     text-indent: -9999px;
