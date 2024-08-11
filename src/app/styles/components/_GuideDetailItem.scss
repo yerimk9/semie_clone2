@@ -76,14 +76,14 @@
           padding: 0.625rem 1.125rem;
           font-size: 0.875rem;
           border-radius: 21px;
-          background-color: #f3f3f3;
+          background-color: $bg-color1;
           min-width: max-content;
         }
 
         &.hash {
           margin-bottom: 0.4rem;
           margin-right: 0.625rem;
-          color: #15a775;
+          color: $primary-color2;
           font-size: 1rem;
           font-weight: 500;
         }
@@ -94,7 +94,7 @@
 
           margin-bottom: 0.4rem;
           margin-right: 0.625rem;
-          color: #15a775 !important;
+          color: $primary-color2 !important;
           font-size: 1rem;
           font-weight: 500;
         }
@@ -111,7 +111,7 @@
             top: 50%;
             width: 1px;
             height: 0.625rem;
-            background-color: #b8b8b8;
+            background-color: $bg-color7;
             transform: translateY(-50%);
             content: "";
           }

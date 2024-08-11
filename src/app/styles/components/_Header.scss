@@ -9,7 +9,7 @@ header {
   border-bottom: 1px solid $primary-color2;
   box-sizing: border-box;
   box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, 0.08);
-  background-color: #fff;
+  background-color: $primary-color1;
   transition: top 0.4s;
   z-index: 1000;
 
@@ -55,10 +55,10 @@ header {
               a {
                 font-size: 1rem;
                 font-weight: 500;
-                color: #999;
+                color: $primary-color5;
 
                 &:hover {
-                  color: #15a775;
+                  color: $primary-color2;
                 }
               }
             }
@@ -159,7 +159,7 @@ header {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #15a775;
+  background: $primary-color2;
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
   -webkit-transition: -webkit-transform 0.4s ease;
@@ -209,7 +209,7 @@ header {
             }
 
             &:nth-of-type(3) {
-              background-color: #15a775;
+              background-color: $primary-color2;
               transform: translateY(-0.525rem) rotate(45deg);
             }
           }
@@ -233,14 +233,14 @@ header {
           &:nth-of-type(3) {
             @include flexSpaceBetween;
             margin: 0;
-            background-color: #fff;
+            background-color: $primary-color1;
 
             &::before {
               display: block;
               width: 0.938rem;
               height: 0.127rem;
               border-radius: 100px;
-              background-color: #15a775;
+              background-color: $primary-color2;
               content: "";
             }
 
@@ -249,7 +249,7 @@ header {
               width: 0.127rem;
               height: 0.127rem;
               border-radius: 100%;
-              background-color: #15a775;
+              background-color: $primary-color2;
               content: "";
             }
           }
@@ -281,7 +281,7 @@ header {
     .log {
       margin: 0 0 4.4rem;
       border-radius: 10px;
-      background-color: #eaf6eb;
+      background-color: $bg-color9;
 
       &.loginWrap {
         background-image: url(../../../public/images/right.png);
@@ -319,7 +319,7 @@ header {
           & + li {
             margin-top: 1.65rem;
             padding-top: 1.65rem;
-            border-top: 1px solid #e5e5e5;
+            border-top: 1px solid $bg-color3;
           }
           & > a {
             display: flex;
@@ -350,7 +350,7 @@ header {
             margin-top: 0.9rem;
           }
           a {
-            color: #666;
+            color: $primary-color3;
             font-size: 1.025rem;
             font-weight: 500;
           }
@@ -398,7 +398,7 @@ header {
             }
 
             &:nth-of-type(3) {
-              background-color: #15a775;
+              background-color: $primary-color2;
               transform: translateY(-0.725rem) rotate(45deg);
             }
           }
@@ -449,7 +449,7 @@ header {
         width: calc(100% - 6rem);
         height: 3rem;
         border-radius: 100px;
-        border: solid 1px #c4c4c4;
+        border: solid 1px $bg-color2;
 
         input {
           order: 1;

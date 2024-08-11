@@ -1660,7 +1660,7 @@ footer p {
   padding: 0.625rem 1.125rem;
   font-size: 0.875rem;
   border-radius: 21px;
-  background-color: #f3f3f3;
+  background-color: #f2f2f2;
   min-width: max-content;
 }
 .hashList > li .tagWrap li.hash {
@@ -2449,7 +2449,7 @@ footer p {
   padding: 6.25rem 4.5rem 4.5rem;
   border-radius: 20px;
   box-sizing: border-box;
-  background-color: #fff9e2;
+  background-color: #eff9ef;
   background-image: url("https://semie.cooking/assets/images/common/bg_pattern.png");
 }
 .section3 .title {
@@ -3512,7 +3512,7 @@ footer p {
   align-items: center;
   justify-content: center;
   color: #111;
-  background-color: #fff9e2;
+  background-color: #eff9ef;
 }
 .labList .tab ul li.on a::before {
   display: inline-block;
@@ -4096,7 +4096,7 @@ footer p {
 }
 .eventView .title .label_list .label.orange {
   color: #fb9622;
-  background-color: #fff9e2;
+  background-color: #eff9ef;
 }
 .eventView .title .date {
   color: #666;

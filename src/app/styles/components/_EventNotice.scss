@@ -23,7 +23,7 @@
     padding-bottom: 1.25rem;
     font-size: 1.5rem;
     font-weight: bold;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid $bg-color3;
   }
 
   .event_notice_content {
@@ -32,7 +32,7 @@
     height: 10.25rem;
     margin-bottom: 1.875rem;
     padding-bottom: 1.875rem;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid $bg-color3;
     box-sizing: content-box;
     transition: height 0.4s;
 
@@ -40,7 +40,7 @@
       position: relative;
       margin-top: 1.25rem;
       padding-left: 0.825rem;
-      color: #999;
+      color: $primary-color5;
       font-size: 1rem;
       word-break: keep-all;
 
@@ -51,7 +51,7 @@
         width: 0.25rem;
         height: 0.25rem;
         border-radius: 50%;
-        background-color: #999;
+        background-color: $primary-color5;
         content: "";
       }
     }
@@ -115,7 +115,7 @@
     .event_notice_func {
       .btn_arrow_lg {
         text-indent: 0 !important;
-        border: solid 1px #d4d4d4 !important;
+        border: solid 1px $bg-color4 !important;
         padding: 1rem 1.7rem !important;
       }
     }

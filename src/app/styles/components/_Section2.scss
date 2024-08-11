@@ -14,7 +14,7 @@
 
   .tabMenu {
     padding-bottom: 20px;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid $bg-color3;
 
     > p {
       display: none;
@@ -30,7 +30,7 @@
         align-items: center;
 
         button {
-          color: #d4d4d4;
+          color: $bg-color4;
           font-size: 1.5rem;
           font-weight: bold;
         }
@@ -62,7 +62,7 @@
             height: 6px;
             margin: 0 1rem;
             border-radius: 100%;
-            background-color: #d4d4d4;
+            background-color: $bg-color4;
             content: "";
           }
         }
@@ -151,14 +151,14 @@
                 padding: 0.625rem 1.125rem;
                 font-size: 0.875rem;
                 border-radius: 21px;
-                background-color: #f3f3f3;
+                background-color: $bg-color10;
                 min-width: max-content;
               }
 
               &.hash {
                 margin-bottom: 0.4rem;
                 margin-right: 0.625rem;
-                color: #15a775;
+                color: $primary-color2;
                 font-size: 1rem;
                 font-weight: 500;
               }
@@ -169,7 +169,7 @@
 
                 margin-bottom: 0.4rem;
                 margin-right: 0.625rem;
-                color: #15a775 !important;
+                color: $primary-color2 !important;
                 font-size: 1rem;
                 font-weight: 500;
               }
@@ -186,7 +186,7 @@
                   top: 50%;
                   width: 1px;
                   height: 0.625rem;
-                  background-color: #b8b8b8;
+                  background-color: $bg-color7;
                   transform: translateY(-50%);
                   content: "";
                 }
@@ -230,7 +230,7 @@
         flex-shrink: 0;
         position: absolute !important;
         margin-top: 0;
-        border: 1px solid #d4d4d4;
+        border: 1px solid $bg-color4;
         z-index: 10;
         transform: translateY(-100%);
         cursor: pointer;

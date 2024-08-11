@@ -3,7 +3,7 @@
     padding: 6.25rem 4.5rem 4.5rem;
     border-radius: 20px;
     box-sizing: border-box;
-    background-color: #fff9e2;
+    background-color: $bg-color5;
     background-image: url("https://semie.cooking/assets/images/common/bg_pattern.png");
   }
 
@@ -85,7 +85,7 @@
               }
 
               p {
-                color: #999;
+                color: $primary-color5;
                 font-size: 1rem;
                 margin-left: 5px;
                 margin-top: 1rem;
@@ -101,7 +101,7 @@
                     right: 0;
                     width: 0.063rem;
                     height: 0.625rem;
-                    background-color: #c4c4c4;
+                    background-color: $bg-color2;
                     transform: translateY(-50%);
                     content: "";
                   }

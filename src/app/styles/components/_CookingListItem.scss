@@ -47,7 +47,7 @@
       align-items: center;
       min-height: 1.625rem;
       margin-top: 1.125rem;
-      color: #999;
+      color: $primary-color5;
       font-size: 0.875rem;
 
       .date {
@@ -62,7 +62,7 @@
           width: 1px;
           height: 8px;
           transform: translateY(-50%);
-          background-color: #c4c4c4;
+          background-color: $bg-color2;
           content: "";
         }
       }

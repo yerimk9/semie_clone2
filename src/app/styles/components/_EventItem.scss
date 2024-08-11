@@ -22,7 +22,7 @@
       display: flex;
       align-items: center;
       margin-top: 0.75rem;
-      color: #666;
+      color: $primary-color3;
       font-size: 1rem;
 
       span {
@@ -34,18 +34,18 @@
         border-radius: 5px;
 
         &.green {
-          color: #15a775;
-          background-color: #eff9ef;
+          color: $primary-color2;
+          background-color: $bg-color5;
         }
 
         &.gray {
-          color: #666;
-          background-color: #e5e5e5;
+          color: $primary-color3;
+          background-color: $bg-color3;
         }
 
         &.orange {
-          color: #fb9622;
-          background-color: #fff9e2;
+          color: $primary-color6;
+          background-color: $bg-color6;
         }
       }
     }
