@@ -21,10 +21,7 @@ main {
 }
 
 .section4 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
+  @include flex(space-between, center, column);
   padding: 4.5rem 7rem;
   box-sizing: border-box;
 }
@@ -32,8 +29,7 @@ main {
 .subTitle {
   margin-bottom: 1.875rem;
   h3 {
-    display: flex;
-    align-items: center;
+    @include flexitems;
     font-size: 3.75rem;
     font-weight: 800;
 
@@ -62,7 +58,6 @@ main {
     rgba(0, 0, 0, 0.45)
   );
   opacity: 1;
-  // transform: translateY(50%);
   transition: all 1s ease-out;
   text-align: justify;
   line-height: 2.6rem;
@@ -81,9 +76,7 @@ main {
 }
 
 .totalPic {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include flexSpaceBetween;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -150,9 +143,7 @@ main {
   }
 
   > ul {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    @include flex(flex-end, center, row);
 
     li {
       display: inline-flex;
@@ -208,8 +199,6 @@ main {
   }
 }
 
-// 이 위에는 정리 완료 !!
-
 .myfood {
   position: relative;
   width: 100%;
@@ -224,9 +213,7 @@ main {
   }
 
   .myfoodBtnWrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexSpaceBetween;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -243,8 +230,7 @@ main {
     }
 
     a {
-      display: flex;
-      align-items: center;
+      @include flexitems;
       position: relative;
       padding-left: 2.625rem;
       font-size: 1.125rem;
@@ -292,8 +278,6 @@ img {
   .section4 {
     padding: 4.5rem 1.875rem;
   }
-
-  // 이 위에는 완료
 
   img {
     &.pc-show {
@@ -372,12 +356,10 @@ img {
     margin-left: 79%;
 
     p {
-      display: flex;
-      align-items: center;
+      @include flexitems;
       width: 75%;
       height: 2.563rem;
       padding: 0 1rem;
-      // font-size: 1.625rem;
       font-weight: 500;
       border: solid 1px #d4d4d4;
       border-radius: 2rem;
@@ -389,7 +371,7 @@ img {
 
       &:hover {
         ~ ul {
-          height: 9.525rem; // 12.525rem
+          height: 9.525rem;
           padding: 1rem;
           border: solid 1px #d4d4d4;
 

@@ -1,13 +1,10 @@
 .section4 {
   .title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexSpaceBetween;
     width: 100%;
 
     h3 {
-      display: flex;
-      align-items: center;
+      @include flexitems;
       font-size: 3.45rem;
       font-weight: 800;
 
@@ -24,12 +21,6 @@
 
   .mySwiper {
     width: 100%;
-    // img {
-    //   &.mb-show {
-    //     display: none;
-    //   }
-    // }
-
     .swiper-button-prev {
       transform: rotate(180deg);
     }
@@ -37,7 +28,6 @@
     .swiper-button-prev,
     .swiper-button-next {
       flex-shrink: 0;
-      //   position: static;
       width: 2.25rem !important;
       height: 2.25rem !important;
       margin-top: 0;

@@ -117,8 +117,7 @@
         margin-bottom: 1.875rem;
         font-size: 1.375rem;
         font-weight: 800;
-        display: flex;
-        align-items: center;
+        @include flexitems;
         gap: 0.5rem;
 
         span {
@@ -127,8 +126,7 @@
       }
 
       .cmt_login {
-        display: flex;
-        align-items: center;
+        @include flexitems;
         margin-bottom: 2.25rem;
 
         .loginFirst {
@@ -169,8 +167,7 @@
       }
 
       .cmt_box {
-        display: flex;
-        align-items: flex-start;
+        @include flex(start, flex-start, row);
         margin-top: 1.875rem;
 
         .cmt {

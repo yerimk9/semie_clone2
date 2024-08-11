@@ -47,8 +47,7 @@ header {
 
         &:hover {
           .depth-2 {
-            display: flex;
-            flex-direction: column;
+            @include flex(start, stretch, column);
             gap: 10px;
 
             li {
@@ -321,8 +320,7 @@ header {
             border-top: 1px solid $bg-color3;
           }
           & > a {
-            display: flex;
-            align-items: center;
+            @include flexitems;
             position: relative;
             font-size: 1.65rem;
             font-weight: bold;

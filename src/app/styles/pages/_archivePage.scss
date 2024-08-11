@@ -65,9 +65,6 @@
 
       .share_btn {
         display: none;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        position: absolute;
         left: 50%;
         top: 100%;
         width: 10.875em;
@@ -194,7 +191,6 @@
 
     .detail_bg {
       position: relative;
-      // height: 22.5rem;
       height: 14rem;
 
       img {
@@ -331,13 +327,11 @@
           padding: 3.938rem 0 1.538rem;
 
           h3 {
-            // font-size: 3.125rem;
             font-size: 1.825rem;
             font-weight: 800;
           }
 
           p {
-            // font-size: 1.875rem;
             font-size: 1.1rem;
             line-height: 1.5rem;
           }
@@ -351,8 +345,6 @@
               &:first-of-type {
                 margin-left: 0;
               }
-
-              // font-size: 1.625rem;
             }
           }
         }
@@ -361,12 +353,10 @@
           > li {
             .text {
               h4 {
-                // font-size: 1.875rem;
                 font-size: 1.2rem;
               }
 
               p {
-                // font-size: 1.625rem;
                 font-size: 1rem;
               }
             }
@@ -381,7 +371,6 @@
                 width: 49%;
                 margin-right: 0;
                 padding: 0.625rem 0.325rem;
-                // font-size: 1.25rem;
                 font-size: 0.9rem;
 
                 span {

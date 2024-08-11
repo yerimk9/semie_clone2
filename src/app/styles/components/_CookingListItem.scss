@@ -43,8 +43,7 @@
     }
 
     .info {
-      display: flex;
-      align-items: center;
+      @include flexitems;
       min-height: 1.625rem;
       margin-top: 1.125rem;
       color: $primary-color5;

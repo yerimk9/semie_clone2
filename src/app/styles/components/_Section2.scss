@@ -19,8 +19,7 @@
     }
 
     ul {
-      display: flex;
-      align-items: center;
+      @include flexitems;
       width: 100%;
 
       li {
@@ -73,8 +72,6 @@
       .swiper-list-item {
         li {
           position: relative;
-          // width: calc(33.33% - 2rem);
-          // margin: 0 1rem 5rem;
           margin: 2rem 0 2rem;
           box-sizing: border-box;
 

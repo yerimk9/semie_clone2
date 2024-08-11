@@ -23,8 +23,8 @@ main {
 
 .section4 {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   flex-direction: column;
   padding: 4.5rem 7rem;
   box-sizing: border-box;
@@ -138,8 +138,9 @@ main {
 }
 .filter > ul {
   display: flex;
-  align-items: center;
   justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
 }
 .filter > ul li {
   display: inline-flex;
@@ -199,8 +200,8 @@ main {
 }
 .myfood .myfoodBtnWrap {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -612,6 +613,8 @@ header .gnb .depth-1 > li {
 }
 header .gnb .depth-1 > li:hover .depth-2 {
   display: flex;
+  justify-content: start;
+  align-items: stretch;
   flex-direction: column;
   gap: 10px;
 }
@@ -1424,8 +1427,6 @@ footer p {
   justify-content: space-between;
   align-items: stretch;
   flex-direction: row;
-  /* display: flex;
-  justify-content: space-between; */
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1987,6 +1988,8 @@ footer p {
 .section1 .swiper-container .mySwiper2 .swiper-slide .thumb {
   display: flex;
   justify-content: space-between;
+  align-items: stretch;
+  flex-direction: row;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2143,8 +2146,9 @@ footer p {
   }
   .section1 .swiper-container {
     padding: 0;
-    align-items: center;
+    display: flex;
     justify-content: center;
+    align-items: center;
   }
   .section1 .swiper-container .title {
     position: revert-layer;
@@ -2458,8 +2462,8 @@ footer p {
 }
 .section3 .title {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   margin-bottom: 3.375rem;
 }
@@ -2626,8 +2630,8 @@ footer p {
 }
 .section4 .title {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
 }
 .section4 .title h3 {
@@ -2786,8 +2790,6 @@ footer p {
 }
 .cardList > li {
   overflow: hidden;
-  /* display: flex;
-  flex-flow: column; */
   display: flex;
   flex-direction: column;
   position: relative;
@@ -3183,9 +3185,6 @@ footer p {
 }
 .guideDetail .detail_control .share_wrap .share_btn {
   display: none;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  position: absolute;
   left: 50%;
   top: 100%;
   width: 10.875em;
@@ -3512,8 +3511,8 @@ footer p {
   font-weight: 600;
   text-align: center;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 .labList .tab ul li.on a {
   display: flex;
@@ -3792,7 +3791,9 @@ footer p {
 }
 .labView .worry_view_cont .comment_wrap .cmt_box {
   display: flex;
+  justify-content: start;
   align-items: flex-start;
+  flex-direction: row;
   margin-top: 1.875rem;
 }
 .labView .worry_view_cont .comment_wrap .cmt_box .cmt {
