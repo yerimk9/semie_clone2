@@ -1,5 +1,3 @@
-import Footer from "@/app/components/Footer";
-import Header from "@/app/components/Header";
 import React from "react";
 import { collection, getDocs, query } from "firebase/firestore";
 import { db } from "@/firebase";
@@ -30,8 +28,6 @@ async function page({ params }: { params: { id: string } }) {
 
   return (
     <div>
-      <Header />
-
       <main>
         <div className="labView">
           <div className="subTitle mb_show">
@@ -70,8 +66,6 @@ async function page({ params }: { params: { id: string } }) {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

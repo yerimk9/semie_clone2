@@ -3,8 +3,6 @@ import { collection, getDocs, query } from "firebase/firestore";
 import { db } from "@/firebase";
 import Link from "next/link";
 import Image from "next/image";
-import Header from "@/app/components/Header";
-import Footer from "@/app/components/Footer";
 import { CookingListItemProps } from "@/app/types";
 import ReviewBox from "@/app/components/ReviewBox";
 
@@ -27,8 +25,6 @@ async function page({ params }: { params: { id: string } }) {
   }
   return (
     <div>
-      <Header />
-
       <main>
         <div className="labView">
           <div className="subTitle mb_show">
@@ -68,8 +64,6 @@ async function page({ params }: { params: { id: string } }) {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

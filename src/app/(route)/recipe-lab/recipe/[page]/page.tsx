@@ -1,5 +1,3 @@
-import Footer from "@/app/components/Footer";
-import Header from "@/app/components/Header";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -30,7 +28,6 @@ async function page({ params }: { params: { page: string } }) {
 
   return (
     <div>
-      <Header />
       <main>
         <div className="labList">
           <div className="subTitle">
@@ -96,8 +93,6 @@ async function page({ params }: { params: { page: string } }) {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

@@ -1,5 +1,3 @@
-import Footer from "@/app/components/Footer";
-import Header from "@/app/components/Header";
 import { db } from "@/firebase";
 import { collection, getDocs, query } from "firebase/firestore";
 import Image from "next/image";
@@ -47,8 +45,6 @@ async function page({ params }: { params: { name: string } }) {
 
   return (
     <div>
-      <Header />
-
       <main>
         <div className="eventView">
           <div className="subTitle mb_show">
@@ -162,8 +158,6 @@ async function page({ params }: { params: { name: string } }) {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

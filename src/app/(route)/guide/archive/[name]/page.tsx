@@ -1,5 +1,3 @@
-import Footer from "@/app/components/Footer";
-import Header from "@/app/components/Header";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -32,7 +30,6 @@ async function page({ params }: { params: { name: number } }) {
 
   return (
     <div>
-      <Header />
       <main>
         <div className="guideDetail">
           <div className="detail_bg">
@@ -100,7 +97,6 @@ async function page({ params }: { params: { name: number } }) {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }

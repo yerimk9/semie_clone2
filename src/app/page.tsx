@@ -1,5 +1,3 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import Section1 from "./components/Section1";
 import { collection, getDocs, query } from "firebase/firestore";
 import { db } from "@/firebase";
@@ -26,8 +24,6 @@ export default async function Home() {
 
   return (
     <div>
-      <Header />
-
       <main>
         <div className="section1">
           <Section1 list={foodItems} />
@@ -45,7 +41,6 @@ export default async function Home() {
           <Section4 />
         </div>
       </main>
-      <Footer />
     </div>
   );
 }

@@ -1,5 +1,3 @@
-import Footer from "@/app/components/Footer";
-import Header from "@/app/components/Header";
 import Image from "next/image";
 import React from "react";
 import il_wow from "../../../../../public/images/il_wow.png";
@@ -24,8 +22,6 @@ async function page({ params }: { params: { page: string } }) {
   }
   return (
     <div>
-      <Header />
-
       <main>
         <div className="eventList">
           <div className="subTitle">
@@ -54,8 +50,6 @@ async function page({ params }: { params: { page: string } }) {
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

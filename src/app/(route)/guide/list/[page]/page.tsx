@@ -1,7 +1,5 @@
 import Filter from "@/app/components/Filter";
 import FoodGuideItem from "@/app/components/FoodGuideItem";
-import Footer from "@/app/components/Footer";
-import Header from "@/app/components/Header";
 import Pagination from "@/app/components/Pagination";
 import { FoodGuideListItem } from "@/app/types";
 import getMaxPageNumber from "@/app/utils/getMaxPageNumber";
@@ -14,7 +12,6 @@ export default async function page({ params }: { params: { page: string } }) {
   let maxPageNumber = 1;
 
   try {
-    // const { wowList } = await pageClick(currentPage, "food_guide_list", 12);
     const { dataList } = await pageClick<FoodGuideListItem>(
       currentPage,
       "food_guide_list",
@@ -29,8 +26,6 @@ export default async function page({ params }: { params: { page: string } }) {
 
   return (
     <div>
-      <Header />
-
       <main>
         <div className="guideList">
           <div className="subTitle">
@@ -53,8 +48,6 @@ export default async function page({ params }: { params: { page: string } }) {
           />
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }
